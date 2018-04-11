@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-invalid-http-host-header-django" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/04/invalid-http-host-header-django/" class="article-date">
+  <time datetime="2017-10-04T07:23:59.000Z" itemprop="datePublished">2017-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/04/invalid-http-host-header-django/">Invalid HTTP_HOST header Django</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：Centos, Django 1.11.4,</p>
+<p>在运行Django Demo时的错误，运行是以监听所有IP的方式</p>
+<p><pre class="lang:default decode:true">python manage.py runserver 0.0.0.0:8000</pre><br>报的错是 Invalid HTTP_HOST header Django. You may need to add u’xxx.xxx.com’ to ALLOWED_HOSTS.</p>
+<p>解决办法是在Setting.py中，将u’xxx.xxx.com’（你的域名）加入到ALLOWED_HOSTS中，也把本地的ip也加进去。查了下<a href="https://docs.djangoproject.com/en/1.11/ref/settings/" target="_blank" rel="noopener">官方文档</a>，说是为了防止HTTP Host header attacks。</p>
+<p><pre class="lang:default decode:true ">ALLOW_HOST = [u’xxx.xxx.com’, ‘localhost’, ‘127.0.0.1’]</pre><br>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/04/invalid-http-host-header-django/" data-id="cjfukge0l00alqoz1e3cfhacn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-85-b3-e4-ba-8e-e6-96-b0-e7-89-88day-one-e7-9a-84-e5-90-8c-e6-ad-a5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/01/e5-85-b3-e4-ba-8e-e6-96-b0-e7-89-88day-one-e7-9a-84-e5-90-8c-e6-ad-a5/" class="article-date">
+  <time datetime="2017-10-01T11:18:09.000Z" itemprop="datePublished">2017-10-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/01/e5-85-b3-e4-ba-8e-e6-96-b0-e7-89-88day-one-e7-9a-84-e5-90-8c-e6-ad-a5/">关于新版Day One的同步</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>新版的Day One出了很久了，但我一直在iOS和Mac上用的是老版的。同步用的是Dropbox。</p>
+<p>这两天发现iOS端无法同步到Dropbox上了，可能是升级iOS11后的结果吧。于是用了个新版，新版只能用Day One自己的同步功能，不能用第三方的。我在Day One中的Account Status是Plus。我在新Day One iOS App中导入Day One Classic中的数据。数据是导进来了，但我在Mac上的Day One Classic中选择用Day One Account同步时，数据并没有完全同步过来。而Mac上的新Day One的同步功能是需要再次付费的。</p>
+<p>后来我发现在新Day One iOS App中有两个日记本（Journals），其中有个日记本的数据的数量是对的，另一个数据的数量少了几篇（少的就是没同步的这几天的数据）。于是我猜测Day One Classic Mac App的Day One Account的同步功能，只会同步默认的一个日记本。我测试了下，发现我的猜测是对的。Day One iOS App中可以选择要同步的日记本，这样问题就解决了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/01/e5-85-b3-e4-ba-8e-e6-96-b0-e7-89-88day-one-e7-9a-84-e5-90-8c-e6-ad-a5/" data-id="cjfukgdqg002nqoz1rt202koz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-85-b3-e4-ba-8e-e7-a1-ac-e4-bb-b6-e7-83-ad-e6-8b-94-e6-8f-92" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/28/e5-85-b3-e4-ba-8e-e7-a1-ac-e4-bb-b6-e7-83-ad-e6-8b-94-e6-8f-92/" class="article-date">
+  <time datetime="2017-09-28T14:24:39.000Z" itemprop="datePublished">2017-09-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/28/e5-85-b3-e4-ba-8e-e7-a1-ac-e4-bb-b6-e7-83-ad-e6-8b-94-e6-8f-92/">关于硬件热拔插</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于电脑外接USB的设备，我们很多都习惯热拔插，像USB摄像头。热拔插是指在设备没有断电的情况下的物理连接。但其实并不是任何设备都是无条件的热拔插的，我们会注意到同样是usb接口的u盘是需求先eject后才能拔掉。</p>
+<p>最近我在热拔插一些外置设备时，可能导致了硬件损坏。多屏宝是用来接在显卡上，使得操作系统认为有个很大分辨率的显示设备接在电脑上了。然后多屏宝再将画面分割输出给到其它显示设备。而这样的设备，在没有断电时对其接口上的视频线进行拔插，可能造成硬件损坏。而插在主板上的采集卡可能也存在这样的操作问题。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/28/e5-85-b3-e4-ba-8e-e7-a1-ac-e4-bb-b6-e7-83-ad-e6-8b-94-e6-8f-92/" data-id="cjfukgdqs002vqoz17sbtsvlg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e8-8b-b1-e8-af-ad-e7-ac-94-e8-ae-b0-e5-8f-91-e9-9f-b3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/23/e8-8b-b1-e8-af-ad-e7-ac-94-e8-ae-b0-e5-8f-91-e9-9f-b3/" class="article-date">
+  <time datetime="2017-09-23T13:10:31.000Z" itemprop="datePublished">2017-09-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/English/">English</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/23/e8-8b-b1-e8-af-ad-e7-ac-94-e8-ae-b0-e5-8f-91-e9-9f-b3/">英语笔记-发音</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、我的G, J, Z三个字母发音有问题。<br>G, 嘴唇要像大猩猩接吻那样，往外伸得比较长。<br>J, 其实就是周杰伦的英文Jay，发音时嘴唇往后咧开。<br>Z, 这个英音和美音差别比较大。</p>
+<p>2、元音和辅音<br><a href="http://www.guokr.com/blog/483203/" target="_blank" rel="noopener">你真的知道什么是元音什么是辅音吗？</a><br>上面这篇文章讲得非常好，辅音是给元音加上中断，让整体单词的发音更容易听清楚。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/23/e8-8b-b1-e8-af-ad-e7-ac-94-e8-ae-b0-e5-8f-91-e9-9f-b3/" data-id="cjfukgdxx008mqoz19p5jzmem" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-85-a5-e4-ba-86onedrive-ef-bc-88office-365-ef-bc-89" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/10/e5-85-a5-e4-ba-86onedrive-ef-bc-88office-365-ef-bc-89/" class="article-date">
+  <time datetime="2017-09-10T06:46:27.000Z" itemprop="datePublished">2017-09-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/10/e5-85-a5-e4-ba-86onedrive-ef-bc-88office-365-ef-bc-89/">入了OneDrive（Office 365）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我主要是为了用OneDrive才买的Office 365的。在这之前我用的是坚果云，买了其专业版，很好用，缺点是要加多空间有点贵。坚果云专业版才40G左右，我想把其它资料也放在云端备份，这样会比本地的硬盘靠谱些。</p>
+<p>之前OneDrive的缺点是没有version history，但最近有这功能了。这样子，OneDrive VS Google Drive VS Dropbox，OneDrive是最合算的，家庭版每个帐号是都有1T的OneDrive。用坚果云高级专业版的钱就可以买到1T的大厂同步网盘空间，太合算了。</p>
+<p>用了一周时间下来，感觉还可以，要上传的文件比较多时，一开始的预处理速度会比较慢，预处理后的上传和下载的速度我都可以接受。公司里被限速500K，大概可以跑到300~400K左右。它有时会显示有些文件 can’t by synced, Tap or click for more info. 点进去后给的说明是This file is experiencing delays. We’ll try downloading/uploading the file later.  这样子就不管它，它后面会自己上传。有次提醒我说某个txt文件不能上传，我看了下该文本文件有乱码，我就把它删了就不管它了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/10/e5-85-a5-e4-ba-86onedrive-ef-bc-88office-365-ef-bc-89/" data-id="cjfukgdqi002pqoz15ht6vcfk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e7-ac-ac-e4-b8-80-e6-ac-a1-e6-b4-97-e7-89-99-e7-ac-ac-e4-b8-80-e6-ac-a1-e5-9c-a8-e9-a6-99-e6-b8-af-e7-9c-8b-e7-89-99" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/10/e7-ac-ac-e4-b8-80-e6-ac-a1-e6-b4-97-e7-89-99-e7-ac-ac-e4-b8-80-e6-ac-a1-e5-9c-a8-e9-a6-99-e6-b8-af-e7-9c-8b-e7-89-99/" class="article-date">
+  <time datetime="2017-09-10T05:57:51.000Z" itemprop="datePublished">2017-09-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/10/e7-ac-ac-e4-b8-80-e6-ac-a1-e6-b4-97-e7-89-99-e7-ac-ac-e4-b8-80-e6-ac-a1-e5-9c-a8-e9-a6-99-e6-b8-af-e7-9c-8b-e7-89-99/">第一次洗牙+第一次在香港看牙</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>地点：沙田Bayey &amp; Jackson Dental Surgeons Ltd.</p>
+<p>Millie先被叫去洗牙了。我接着被叫进去，是个女医生，外加个女护士。可是她俩都不太会普通话，我英语和粤语都不太灵光，然后就变成我预想到的各种听不懂的尴尬场景。医生先咨询我一些情况，上一次看牙是什么时候等，我告诉她在刷牙时，有时某个地方的牙会痛，她问我用的是软毛的牙刷还是硬毛牙刷。刚开始医生先是帮我把每颗牙都检查了一遍，并逐个报给护士记录。然后拍x光检查其它的牙齿，最后给出治疗方案，需要付500港币把某颗牙填上。</p>
+<p>你看，英语不好，这么点事都办不好。<br><span class="s1">补牙：fill a tooth 或者 filling<br></span><span class="s1">洗牙：scaling and polishing，<br></span><span class="s1">拔牙：tooth extraction或者extraction，<br></span><span class="s1">牙刷：toothbrush，软 soft，硬 hard，<br></span><span class="s2">去它官网有专业的英文词 <a href="http://www.bjdental.com/services.html" target="_blank" rel="noopener"><span class="s3">http://www.bjdental.com/services.html</span></a></span></p>
+<p>洗牙的过程还好，是另一个医生。她会点普通话，还顺便教我用牙线，并要求每天都要用。洗牙时除了感觉有点痛外，并没有太大的不适感。单纯的洗牙并不会把牙齿弄白，也就不会出现真牙被洗白，而假牙没有变化的情况。</p>
+<p>为了看牙，我还提前把之前在外地看牙的病历都想办法去弄到了，但没派上用场。</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/10/e7-ac-ac-e4-b8-80-e6-ac-a1-e6-b4-97-e7-89-99-e7-ac-ac-e4-b8-80-e6-ac-a1-e5-9c-a8-e9-a6-99-e6-b8-af-e7-9c-8b-e7-89-99/" data-id="cjfukgdxb008aqoz109zgniaj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-javax-net-ssl-sslhandshakeexception-java-security-cert-certpathvalidatorexception-trust-anchor-for-certification-path-not-found" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/08/javax-net-ssl-sslhandshakeexception-java-security-cert-certpathvalidatorexception-trust-anchor-for-certification-path-not-found/" class="article-date">
+  <time datetime="2017-09-08T09:23:45.000Z" itemprop="datePublished">2017-09-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/08/javax-net-ssl-sslhandshakeexception-java-security-cert-certpathvalidatorexception-trust-anchor-for-certification-path-not-found/">javax.net.ssl.SSLHandshakeException:    java.security.cert.CertPathValidatorException:      Trust anchor for certification path not found.</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同事给过来的错误，安卓App在调用时报的错。搜了下，是服务端的SSL没设置好，在相应的iOS App上这个是正常的，在安卓上有问题。</p>
+<p>参考链接：<a href="http://www.caojunfei.com/?p=3683" target="_blank" rel="noopener">okhttp使用https报 Trust anchor for certification path not found解决办法</a></p>
+<p>参考链接2：<a href="https://www.myssl.cn/tools/check-server-cert.html" target="_blank" rel="noopener">SSL安装检查</a></p>
+<p>链接3：<a href="https://www.myssl.cn/tools/downloadchain.html" target="_blank" rel="noopener">下载中间证书</a></p>
+<p>环境：Centos 6，Nginx，Let’s Encrypt</p>
+<p>通过链接2可以检查有什么问题。我这边是缺少中间证书。解决办法是在链接3中操作，生成中间证书，下载下来是chain.crt。服务器中Nginx在用的证书的文件是Certificate.crt，然后把中间证书里的内容复制到Certificate.crt里（另起一行）。<br>检查一下Nginx的配置， sudo nginx -s reload<br>然后重启Nginx，sudo service nginx restart</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/08/javax-net-ssl-sslhandshakeexception-java-security-cert-certpathvalidatorexception-trust-anchor-for-certification-path-not-found/" data-id="cjfukge0w00avqoz1mxrk2fwn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-maya-controllers-joints-mesh" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/07/maya-controllers-joints-mesh/" class="article-date">
+  <time datetime="2017-09-07T10:12:27.000Z" itemprop="datePublished">2017-09-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Unity3D/">Unity3D</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/07/maya-controllers-joints-mesh/">Maya Controllers Joints Mesh</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同事跟我讲了点Maya中的一些概念，我做些笔记。</p>
+<p><a href="https://cloudup.com/ijwygzZaLlH" target="_blank" rel="noopener">https://cloudup.com/ijwygzZaLlH</a></p>
+<p>他拿提线木偶做比喻， Controllers相当于师傅手中的木棍（不知道专业名词叫啥），连接着线，是用来控制线的。Joints相当于木偶身上被绳子控制的那些节点。Mesh相当于木偶身上的衣服等。</p>
+<p><a href="https://cloudup.com/izpSDZgsqNo" target="_blank" rel="noopener">https://cloudup.com/izpSDZgsqNo</a></p>
+<p>上图中讲的是实际工作中遇到的问题。因为现在的Maya文件（卡通角色）是按演艺的要求制作的，不是按Unity的要求制作的，于是需要对Maya文件进行修改。但在修改时又想尽量能够复用以前做的动画。由于动画是由动画师去控制Controllers而做出来的，而Controllers控制的是Joints，所以Controllers和Joints这两者不要有大的改动，就可以复用原来的动画。如果改动的话对动画有哪些影响？比如角色是有尾巴的，然后它的动画里都是有控制其尾巴，如果把尾巴的相关Joints去掉，原先的动画是可以复用的。相反，如果角色是没有尾巴的，但现在想加上尾巴，这时候就得在原先的动画里加上控制尾巴（还是得重新做？）。</p>
+<p>===========20171102 update ===========</p>
+<p>引用自《Unity5.x 从入门到精通》 11.3.1</p>
+<p><strong>人形网络模型</strong></p>
+<p>为了充分利用Mecanim的人形动画系统和动画重定向功能，需要一个具有骨骼绑定和蒙皮的人形网格模型。</p>
+<p>（1）人形网格模型一般由一组多边形或三角形网格组成。创建模型的过程被称为建模（Modeling）。</p>
+<p>（2）为了控制角色的运动，必须为其创建一个骨骼关节层级（Joint Hierarchy），该层级定义了网格内部的骨骼结构及其相互运动关系，这个过程被称为骨骼绑定（Rigging）。</p>
+<p>（3）人形网格模型必须与关节层级关联起来，即通过指定关节的动画来控制特定风格的运动，这个过程被称为蒙皮（Skinning）。</p>
+<p><a href="https://cloudup.com/iAhbm-TlEyc" target="_blank" rel="noopener">https://cloudup.com/iAhbm-TlEyc</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/07/maya-controllers-joints-mesh/" data-id="cjfukge1600b4qoz1y46c9tvp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-arduino-e7-ba-bf-e6-80-a7-e7-a3-81-e5-8a-9b-e9-9c-8d-e5-b0-94-e4-bc-a0-e6-84-9f-e5-99-a8" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/04/arduino-e7-ba-bf-e6-80-a7-e7-a3-81-e5-8a-9b-e9-9c-8d-e5-b0-94-e4-bc-a0-e6-84-9f-e5-99-a8/" class="article-date">
+  <time datetime="2017-09-04T09:49:01.000Z" itemprop="datePublished">2017-09-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/04/arduino-e7-ba-bf-e6-80-a7-e7-a3-81-e5-8a-9b-e9-9c-8d-e5-b0-94-e4-bc-a0-e6-84-9f-e5-99-a8/">Arduino 线性磁力霍尔传感器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同事弄的，我记录下笔记。环境：Windows 10，Auduino 1.6.6，线性磁力霍尔传感器，磁铁。</p>
+<p><a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2ed6e797QNBnaB&amp;id=537605880039&amp;_u=4203hes2431" target="_blank" rel="noopener">传感器购买链接</a>，<a href="https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2ed6e797QNBnaB&amp;id=548620734912&amp;_u=4203hesd46b" target="_blank" rel="noopener">磁铁购买链接</a></p>
+<p><pre class="lang:default decode:true ">#define  M0  4</pre></p>
+<p>#define  M1  5</p>
+<p>#define  M2  6</p>
+<p>#define  M3  7</p>
+<p>void setup() {<br>  // put your setup code here, to run once:<br>  Serial.begin(9600);<br>  delay(300);<br>  pinMode(M0 ,INPUT);<br>  pinMode(M1 , INPUT);<br>  pinMode(M2 ,INPUT);<br>  pinMode(M3 ,INPUT);<br>  Serial.println(“AOK”);<br>}</p>
+<p>int m=0,m1= 0,m2 = 0,m3 = 0,m4 = 0;<br>void loop() {<br>  // put your main code here, to run repeatedly:<br>  if(readPin(M0) == HIGH)<br>    {<br>       //Serial.println(“1001”);<br>        m1 = 1;<br>    }<br>    else<br>    {<br>         m1 = 0;<br>    }</p>
+<pre><code> if(readPin(M1) == HIGH)
+{
+ //  Serial.println(&quot;1010&quot;);
+     m2 = 1;
+}
+ else 
+ {
+      m2 = 0;
+ }
+
+ if(readPin(M2) == HIGH)
+{
+  // Serial.println(&quot;1100&quot;);
+     m3 = 1;
+}
+ else 
+ {
+      m3 = 0;
+ }
+
+ if(readPin(M3) == HIGH)
+{
+ //  Serial.println(&quot;1000&quot;);
+     m4 = 1;
+}
+ else 
+ {
+      m4 = 0;
+ }
+
+m = m1*1000+m2*100+m3*10+m4;
+Serial.println(m);
+delay(500);
+</code></pre><p>}</p>
+<p>int readPin(int inPin)<br> {<br>   return(digitalRead(inPin));<br> }<br>以上是代码。</p>
+<p><a href="https://cloudup.com/ilq-afEEAL8" target="_blank" rel="noopener">https://cloudup.com/ilq-afEEAL8</a></p>
+<p><a href="https://cloudup.com/im0o-4rS110" target="_blank" rel="noopener">https://cloudup.com/im0o-4rS110</a></p>
+<p><a href="https://cloudup.com/iPSVasa_BJj" target="_blank" rel="noopener">https://cloudup.com/iPSVasa_BJj</a></p>
+<p>蓝色的是Arduino Nano</p>
+<p>在Arduino软件的菜单中，Tools –&gt; Board 得选择Arduino Nano</p>
+<p>还得选择对应的Com接口，Tools –&gt; Port。</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/04/arduino-e7-ba-bf-e6-80-a7-e7-a3-81-e5-8a-9b-e9-9c-8d-e5-b0-94-e4-bc-a0-e6-84-9f-e5-99-a8/" data-id="cjfukgdla001aqoz112ltt4s4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-powerpoint-2007-e6-97-a0-e6-b3-95-e5-90-af-e5-8a-a8-visual-studio-community" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/03/powerpoint-2007-e6-97-a0-e6-b3-95-e5-90-af-e5-8a-a8-visual-studio-community/" class="article-date">
+  <time datetime="2017-09-03T04:46:20.000Z" itemprop="datePublished">2017-09-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/03/powerpoint-2007-e6-97-a0-e6-b3-95-e5-90-af-e5-8a-a8-visual-studio-community/">PowerPoint 2007无法启动 Visual Studio Community</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Windows 10 ，Microsoft Office 2007</p>
+<p>我很少用PowerPoint，有次打开时发现无法打开了，无论是双击ppt文件还是在开始里直接打开软件，都会跳出个小框提示 Visual Studio Community啥，然后要等半个小时以上，才打得开。</p>
+<p>解决办法也蛮意外的，在开始里，Microsoft Office项里，有一个Microsoft Office诊断，居然就自己诊断好了。赞。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/09/03/powerpoint-2007-e6-97-a0-e6-b3-95-e5-90-af-e5-8a-a8-visual-studio-community/" data-id="cjfukge2f00buqoz1d5n98h08" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/IT/">IT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Python/">Python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/UI/">UI</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMLCSS/">HTMLCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/Skill/">Skill</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ObjectC/">ObjectC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenGL/">OpenGL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Phone/">Phone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity3D/">Unity3D</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Verified/">Verified</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-glass/">google glass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/makerfair/">makerfair;</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/order/">order</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phtyon/">phtyon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uber-shenzhen/">uber shenzhen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LG-HBS-730/" style="font-size: 10px;">LG HBS 730</a> <a href="/tags/LG-HBS-800/" style="font-size: 10px;">LG HBS 800</a> <a href="/tags/Oculus/" style="font-size: 10px;">Oculus</a> <a href="/tags/Paypal/" style="font-size: 10px;">Paypal</a> <a href="/tags/Verified/" style="font-size: 10px;">Verified</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cpanel/" style="font-size: 10px;">cpanel</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/google-glass/" style="font-size: 10px;">google glass</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/makerfair/" style="font-size: 10px;">makerfair;</a> <a href="/tags/mini-weibo/" style="font-size: 10px;">mini weibo</a> <a href="/tags/order/" style="font-size: 10px;">order</a> <a href="/tags/phtyon/" style="font-size: 10px;">phtyon</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/uber-shenzhen/" style="font-size: 10px;">uber shenzhen</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hexo-httprequestexception-encountered-could-not-read-username-for-httpsgithub-com/">Hexo, HttpRequestException encountered, could not read Username for &#39;https://github.com&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/e9-a6-99-e6-b8-af-e7-99-be-e4-bd-b3-e7-ba-bf-e4-b8-8a-e8-b4-ad-e7-89-a9-e4-bd-93-e9-aa-8c/">香港百佳线上购物体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/windows-10-e6-9b-b4-e6-96-b0-e9-94-99-e8-af-af-0x800f081f-e7-9a-84-e8-a7-a3-e5-86-b3-e5-8a-9e-e6-b3-95/">Windows 10 更新错误 0x800f081f 的解决办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

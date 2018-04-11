@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/17/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-e9-80-92-e5-bd-92-e7-9a-84-e7-bc-ba-e7-82-b9" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/04/e9-80-92-e5-bd-92-e7-9a-84-e7-bc-ba-e7-82-b9/" class="article-date">
+  <time datetime="2012-11-04T08:47:34.000Z" itemprop="datePublished">2012-11-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/04/e9-80-92-e5-bd-92-e7-9a-84-e7-bc-ba-e7-82-b9/">递归的缺点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>同事写的一些代码中有递归，导致效率下降好多，在debug下非常明显，导致大家在用debug模式下打开文件调试非常慢。<br>解决办法就是不用递归的方式喽。<br>递归的优点是代码简洁，缺点是：<br>运行效率较低，需要额外的栈空间，所以空间消耗要比非递归代码大得多，出栈压栈也有开销，递归深度大时更是明显。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/11/04/e9-80-92-e5-bd-92-e7-9a-84-e7-bc-ba-e7-82-b9/" data-id="cjfukgdye0091qoz1qtffstew" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-a-user-draw-button-that-supports-png-files-with-transparency-for-visual-c-6-0-and-vs2005" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/04/a-user-draw-button-that-supports-png-files-with-transparency-for-visual-c-6-0-and-vs2005/" class="article-date">
+  <time datetime="2012-11-04T08:26:13.000Z" itemprop="datePublished">2012-11-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/UI/">UI</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/04/a-user-draw-button-that-supports-png-files-with-transparency-for-visual-c-6-0-and-vs2005/">A user draw button that supports PNG files with transparency, for Visual C++ 6.0 and VS2005</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>文章链接：<a href="http://www.codeproject.com/Articles/26887/A-user-draw-button-that-supports-PNG-files-with-tr" target="_blank" rel="noopener">http://www.codeproject.com/Articles/26887/A-user-draw-button-that-supports-PNG-files-with-tr</a></p>
+<p>实话说，这个button类真是不太好用。<br>我倒腾了半天，也没有做出他那样的效果。<br>1.首先得添加gdi plus的环境<br>2.要添加进来的那几个文件中CMemDC会跟系统自带的冲突，重定义了，只得改类名，比如改为CMemDC1<br>3.得自己设置按钮的size</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/11/04/a-user-draw-button-that-supports-png-files-with-transparency-for-visual-c-6-0-and-vs2005/" data-id="cjfukgdl10014qoz1d2nn94wo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e7-99-be-e5-ba-a6-e5-92-8c-e8-b0-b7-e6-ad-8c-e6-90-9c-e7-b4-a2-e6-8a-80-e5-b7-a7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/11/03/e7-99-be-e5-ba-a6-e5-92-8c-e8-b0-b7-e6-ad-8c-e6-90-9c-e7-b4-a2-e6-8a-80-e5-b7-a7/" class="article-date">
+  <time datetime="2012-11-03T12:57:59.000Z" itemprop="datePublished">2012-11-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/03/e7-99-be-e5-ba-a6-e5-92-8c-e8-b0-b7-e6-ad-8c-e6-90-9c-e7-b4-a2-e6-8a-80-e5-b7-a7/">百度和谷歌搜索技巧</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.baidu.com/search/skill.html" target="_blank" rel="noopener">百度搜索技巧</a><br><a href="http://baike.baidu.com/view/485412.htm" target="_blank" rel="noopener">搜索引擎技巧</a></p>
+<p><a href="http://www.williamlong.info/archives/728.html" target="_blank" rel="noopener">十大高明的Google搜索技巧</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/11/03/e7-99-be-e5-ba-a6-e5-92-8c-e8-b0-b7-e6-ad-8c-e6-90-9c-e7-b4-a2-e6-8a-80-e5-b7-a7/" data-id="cjfukgdwq007uqoz1jix9s0im" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-88-9b-e5-bb-ba-e4-b8-8d-e8-a7-84-e5-88-99-e5-af-b9-e8-af-9d-e6-a1-86" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/30/e5-88-9b-e5-bb-ba-e4-b8-8d-e8-a7-84-e5-88-99-e5-af-b9-e8-af-9d-e6-a1-86/" class="article-date">
+  <time datetime="2012-10-29T16:10:26.000Z" itemprop="datePublished">2012-10-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/UI/">UI</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/30/e5-88-9b-e5-bb-ba-e4-b8-8d-e8-a7-84-e5-88-99-e5-af-b9-e8-af-9d-e6-a1-86/">创建不规则对话框</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div>源码下载地址：<a href="http://download.csdn.net/detail/a117653909/4704728" target="_blank" rel="noopener">http://download.csdn.net/detail/a117653909/4704728</a></div><br><div>MFC，VS2008，Win7 64位<br>先把底图(bg.bmp)中要扣掉的部分ps成RGB(255, 255, 255)</div><br><div></div><br><div>在OnInitdialog里</div><br><div><br><div></div><br>bmp_Seperator.LoadBitmap( IDB_SEPERATOR );<br><br>if ( bmp_Seperator.GetSafeHandle() )<br>{<br>CRect nocheck_rc(0,0,500,300);  //这个是bg.bmp的size<br>RegionWindow( &amp;bmp_Seperator, nocheck_rc.left, nocheck_rc.top, nocheck_rc.right, nocheck_rc.bottom );<br>}<br><br></div><br><div></div><br><div>void CxxxDlg::RegionWindow( CBitmap<em> p, int left, int top, int right, int bottom )<br>{<br>CDC memDC;<br>memDC.CreateCompatibleDC( GetDC() );<br>CBitmap</em> pOldBitmap = memDC.SelectObject( p );<br>CRgn rgnWnd, rgnTemp;<br>CRect rectWnd;<br>GetWindowRect( &amp;rectWnd );<br>rgnWnd.CreateRectRgn( 0, 0, rectWnd.Width(), rectWnd.Height() );<br>COLORREF color;<br>for ( long x = left; x &lt; right; x ++ )<br>{<br>for ( long y = top; y &lt; bottom; y ++ )<br>{<br>color = memDC.GetPixel( x, y );<br>if ( color == RGB(255,0,255) ) // bg.bmp中要抠掉的颜色<br>{<br>rgnTemp.CreateRectRgn( x, y, x+1, y+1 );<br>rgnWnd.CombineRgn( &amp;rgnWnd, &amp;rgnTemp, RGN_XOR );<br>rgnTemp.DeleteObject();<br>}<br>}<br>}<br>memDC.SelectObject( pOldBitmap );<br>SetWindowRgn( (HRGN)rgnWnd,TRUE );<br>}</div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/30/e5-88-9b-e5-bb-ba-e4-b8-8d-e8-a7-84-e5-88-99-e5-af-b9-e8-af-9d-e6-a1-86/" data-id="cjfukgdru003oqoz1l77y1l5l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-visual-leak-detector-for-visual-c-200820102012" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/28/visual-leak-detector-for-visual-c-200820102012/" class="article-date">
+  <time datetime="2012-10-27T16:20:45.000Z" itemprop="datePublished">2012-10-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/28/visual-leak-detector-for-visual-c-200820102012/">Visual Leak Detector for Visual C++ 2008/2010/2012</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div><br><div><a href="http://vld.codeplex.com/releases/view/82311" target="_blank" rel="noopener"><br>http://vld.codeplex.com/releases/view/82311</a></div><br><div></div><br><div>如何使用：</div><br><div>菜单，Tools，Options，Projects and Solutions，VC++ Directories，在右边的Include files里添加</div><br><div>C:\Program Files (x86)\Visual Leak Detector\include</div><br><div>在Library files里添加</div><br><div>C:\Program Files (x86)\Visual Leak Detector\lib\Win32</div><br><div></div><br><div>然后在需要判断的.cpp文件里加上#include “vld.h”  这个要放在#include “stdafx.h”后面<br>最后会在VS的Output里看到结果。</div><br><div></div><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/28/visual-leak-detector-for-visual-c-200820102012/" data-id="cjfukge4q00drqoz1esvhvmbf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-b2-a1-e6-9c-89-e8-bf-85-e9-9b-b7-e4-bc-9a-e5-91-98-ef-bc-9f-e7-94-a8qq-e7-a6-bb-e7-ba-bf-e5-90-a7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/23/e6-b2-a1-e6-9c-89-e8-bf-85-e9-9b-b7-e4-bc-9a-e5-91-98-ef-bc-9f-e7-94-a8qq-e7-a6-bb-e7-ba-bf-e5-90-a7/" class="article-date">
+  <time datetime="2012-10-22T16:36:11.000Z" itemprop="datePublished">2012-10-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/23/e6-b2-a1-e6-9c-89-e8-bf-85-e9-9b-b7-e4-bc-9a-e5-91-98-ef-bc-9f-e7-94-a8qq-e7-a6-bb-e7-ba-bf-e5-90-a7/">没有迅雷会员？用QQ离线吧</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前在网上看到有人说QQ推出离线下载服务，蛮去试了下，发现是网页版的，它离线下载好，我直接用Firefox下载，速度非常快，我这约1M。<br>这一点在限制使用下载工具的公司也非常好用，不得不说腾讯的服务器真是多。<br>从那以后我就再也没买过迅雷会员了。</p>
+<p>2012.10.31更新<br>不过我向同事们推荐qq离线时，发现他们并没有这个功能，我也忘记了我当时是怎么开通这个功能的，应该是我的qq等级高吧。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/23/e6-b2-a1-e6-9c-89-e8-bf-85-e9-9b-b7-e4-bc-9a-e5-91-98-ef-bc-9f-e7-94-a8qq-e7-a6-bb-e7-ba-bf-e5-90-a7/" data-id="cjfukgdw9007gqoz1vk3mjm1f" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-88-91-e4-b8-ba-e4-bb-80-e4-b9-88-e9-80-89-e6-8b-a9firefox-e8-80-8c-e4-b8-8d-e6-98-afchrome" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/22/e6-88-91-e4-b8-ba-e4-bb-80-e4-b9-88-e9-80-89-e6-8b-a9firefox-e8-80-8c-e4-b8-8d-e6-98-afchrome/" class="article-date">
+  <time datetime="2012-10-21T16:06:12.000Z" itemprop="datePublished">2012-10-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/22/e6-88-91-e4-b8-ba-e4-bb-80-e4-b9-88-e9-80-89-e6-8b-a9firefox-e8-80-8c-e4-b8-8d-e6-98-afchrome/">我为什么选择Firefox而不是Chrome</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.firefox的地址栏默认为google的搜索，右侧的搜索栏我可以设成baidu的，这样我就可以不用切换来实现想用哪个搜索引擎就用哪个；<br>2.Chrome如果只有一个Tab并关闭这个Tab时，整个Chrome就会关闭，这让我要关闭最后一个Tab时，得先开一个空的Tab放在那里，真是太蛋疼了，我觉得浏览器是一个用得非常频率的软件，根本没必要关闭；<br>3.Chrome的安装地址是默认在C盘，这很让人蛋疼，之前为了让Chrome的安装目录放在D盘而倒腾了下。<br>4.未完待续</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/22/e6-88-91-e4-b8-ba-e4-bb-80-e4-b9-88-e9-80-89-e6-8b-a9firefox-e8-80-8c-e4-b8-8d-e6-98-afchrome/" data-id="cjfukgduw0062qoz1lkp4wsr7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-9c-89-e6-84-9f-e3-80-8a-e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e4-bb-8eios-e8-bf-94-e5-9b-9eandroid-e3-80-8b" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/21/e6-9c-89-e6-84-9f-e3-80-8a-e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e4-bb-8eios-e8-bf-94-e5-9b-9eandroid-e3-80-8b/" class="article-date">
+  <time datetime="2012-10-21T11:32:07.000Z" itemprop="datePublished">2012-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Phone/">Phone</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/21/e6-9c-89-e6-84-9f-e3-80-8a-e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e4-bb-8eios-e8-bf-94-e5-9b-9eandroid-e3-80-8b/">有感《为什么我从iOS返回Android》</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原文地址：<a href="http://www.cnbeta.com/articles/207891.htm" target="_blank" rel="noopener">为什么我从ios返回Android</a></p>
+<p>看完这篇文章后我有很大的感慨，我前一段时间也是从魅族M9换到iPhone4S<br>其中魅族M9当时还是Android2.3.5固件，4S的固件是5.1.1<br>我也来吐槽其中的不爽：<br>1. ios中把返回键放在屏幕的左上角，这个操作的跨度真是相当之大，大拇指要从屏幕的右下方移动到左上方去，而且拇指那么大，要准确点中那么小的按钮还真是不容易。这还只是屏幕的左上方，屏幕的右上方也会有按钮，要一手拿着iPhone不让它摔到地上去，还要能够进行如此大距离的操作，真是难受。<br>后来iPhone5出来了，屏幕更长了，而我的大拇指却没有变长= =！<br>Android在屏幕的底部有几个实体的键，虽然在4.0中去掉了实体键，但还是在屏幕底部，单手操作起来比较方便。<br>其实，刚才讨论的前提是单手操作是否重要，我觉得：非常重要！<br>2.黑名单，来电归属地。这两个是为了适应国情，每个国产的Android手机都有这两个功能，真是太人性化了，当你一天接到两三个推销保险的电话时就知道这是多么重要的功能了。而在ios中，还得越狱，然后各种倒腾。<br>3.蓝牙不能分享文件。魅族跟魅族手机分享大文件时，是会自动开启wifi来传数据，相当于在一个局域网内传文件，速度非常快。ios就啥也不能传了。基于版本保护的话可以理解，但可以对传文件的格式进行限制，不能什么格式都不能传，传照片或pdf还是应该允许的。<br>4.音乐等管理要通过itune来进行，太复杂了，我至今只敢在自己笔记本上同步，不知道能否其它的电脑上进行同步，囧。<br>5.一些常用的设置开关要点到设置里面去，不能像Android那样在桌面上装个Widgets。<br>6.通讯录方面，当系统切到英文时，通讯录中是中文就会被排到最底下，而在魅族手机里面，还是可以正常按拼音搜索。要解决这个办法是得把所有的名字都重新加入”姓氏拼音”和”名字拼音“，但这样在搜索时，得加一个空格：比如一个叫陈明的人，把姓和名分开输并加上姓氏拼音和名字拼音后，得这样搜chen ming<br>对中文支持不是很完善。<br>7.用iMessage发照片时，似乎并没有压缩照片，相当费流量<br>8.自带的输入法，不能模糊输入，效率真是低</p>
+<p>ios系统的优点我这不说了，也因为苹果对ios的种种限制，才会有些用得不爽不自由的地方。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/21/e6-9c-89-e6-84-9f-e3-80-8a-e4-b8-ba-e4-bb-80-e4-b9-88-e6-88-91-e4-bb-8eios-e8-bf-94-e5-9b-9eandroid-e3-80-8b/" data-id="cjfukgdvv0072qoz1dlh2alfi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-png-e9-80-8f-e6-98-8e-e7-aa-97-e4-bd-93-e5-85-a8-e6-94-bb-e7-95-a5-ef-bc-88-e6-8e-a7-e4-bb-b6-e4-b8-8d-e9-80-8f-e6-98-8e-ef-bc-89" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/10/png-e9-80-8f-e6-98-8e-e7-aa-97-e4-bd-93-e5-85-a8-e6-94-bb-e7-95-a5-ef-bc-88-e6-8e-a7-e4-bb-b6-e4-b8-8d-e9-80-8f-e6-98-8e-ef-bc-89/" class="article-date">
+  <time datetime="2012-10-10T13:04:31.000Z" itemprop="datePublished">2012-10-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/UI/">UI</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/10/png-e9-80-8f-e6-98-8e-e7-aa-97-e4-bd-93-e5-85-a8-e6-94-bb-e7-95-a5-ef-bc-88-e6-8e-a7-e4-bb-b6-e4-b8-8d-e9-80-8f-e6-98-8e-ef-bc-89/">PNG透明窗体全攻略（控件不透明） </a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://blog.csdn.net/srxumin/article/details/4410917" target="_blank" rel="noopener">http://blog.csdn.net/srxumin/article/details/4410917</a><br>效果还挺不错的<br>缺点也是很明显的，这篇文章的下文有很多人在讨论，贴上的控件周围可能会有红红的一圈。<br>我们当时要实现的效果是在这个的基础上，实现在上面放几个不规则的按钮，我们试用了以下两个按钮类，这两个类都带有按钮的4种状态（正常，鼠标划过，鼠标按下，禁用）<br><a href="http://www.codeproject.com/Articles/1014/CxSkinButton" title="xSkinButton" target="_blank" rel="noopener">xSkinButton</a><br><a href="http://download.csdn.net/detail/chzhe/2032152" target="_blank" rel="noopener"> PNGButton</a><br>1. 用xSkinButton，把它的mask参数加起来，但这样只有在鼠标移到其按钮上的图标时，才会响应Over消息，我们是想鼠标一移动到按钮的矩形区域就响应Over消息<br>而且那张mask的底图还得抠得很细才行，否则会有其它颜色在边缘。<br>2. PNGButton解决了xSkinButton的缺点，但它的底色会被刷得有点粉红色；<br>两者都会有的情况是：在按钮的边缘，会有一圈粉红色，这个问题一直不知道怎么解决。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/10/png-e9-80-8f-e6-98-8e-e7-aa-97-e4-bd-93-e5-85-a8-e6-94-bb-e7-95-a5-ef-bc-88-e6-8e-a7-e4-bb-b6-e4-b8-8d-e9-80-8f-e6-98-8e-ef-bc-89/" data-id="cjfukge1u00bhqoz14fkagxp6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-svn-e4-b8-adtag-branch-trunk-e7-94-a8-e6-b3-95-e8-af-a6-e8-a7-a3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2012/10/05/svn-e4-b8-adtag-branch-trunk-e7-94-a8-e6-b3-95-e8-af-a6-e8-a7-a3/" class="article-date">
+  <time datetime="2012-10-05T15:53:22.000Z" itemprop="datePublished">2012-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/05/svn-e4-b8-adtag-branch-trunk-e7-94-a8-e6-b3-95-e8-af-a6-e8-a7-a3/">SVN中tag branch trunk用法详解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考链接：<a href="http://developer.51cto.com/art/201005/201718.htm" target="_blank" rel="noopener">http://developer.51cto.com/art/201005/201718.htm</a></p>
+<p>Trunk是主干，最主要的代码主干；<br>Branch是分支，一些针对稳定（发布）版本的小修改；<br>Tag是标签，可以是milestone的，可以是发布的，也可以是有重要意义的版本。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2012/10/05/svn-e4-b8-adtag-branch-trunk-e7-94-a8-e6-b3-95-e8-af-a6-e8-a7-a3/" data-id="cjfukge3600ckqoz14rwrkchd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/16/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/18/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/IT/">IT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Python/">Python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/UI/">UI</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMLCSS/">HTMLCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/Skill/">Skill</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ObjectC/">ObjectC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenGL/">OpenGL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Phone/">Phone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity3D/">Unity3D</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Verified/">Verified</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-glass/">google glass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/makerfair/">makerfair;</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/order/">order</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phtyon/">phtyon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uber-shenzhen/">uber shenzhen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LG-HBS-730/" style="font-size: 10px;">LG HBS 730</a> <a href="/tags/LG-HBS-800/" style="font-size: 10px;">LG HBS 800</a> <a href="/tags/Oculus/" style="font-size: 10px;">Oculus</a> <a href="/tags/Paypal/" style="font-size: 10px;">Paypal</a> <a href="/tags/Verified/" style="font-size: 10px;">Verified</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cpanel/" style="font-size: 10px;">cpanel</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/google-glass/" style="font-size: 10px;">google glass</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/makerfair/" style="font-size: 10px;">makerfair;</a> <a href="/tags/mini-weibo/" style="font-size: 10px;">mini weibo</a> <a href="/tags/order/" style="font-size: 10px;">order</a> <a href="/tags/phtyon/" style="font-size: 10px;">phtyon</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/uber-shenzhen/" style="font-size: 10px;">uber shenzhen</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hexo-httprequestexception-encountered-could-not-read-username-for-httpsgithub-com/">Hexo, HttpRequestException encountered, could not read Username for &#39;https://github.com&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/e9-a6-99-e6-b8-af-e7-99-be-e4-bd-b3-e7-ba-bf-e4-b8-8a-e8-b4-ad-e7-89-a9-e4-bd-93-e9-aa-8c/">香港百佳线上购物体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/windows-10-e6-9b-b4-e6-96-b0-e9-94-99-e8-af-af-0x800f081f-e7-9a-84-e8-a7-a3-e5-86-b3-e5-8a-9e-e6-b3-95/">Windows 10 更新错误 0x800f081f 的解决办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

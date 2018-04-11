@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>如何用开源的mini weibo来搭个自己的应用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="做这个事情和写这篇博文纯粹是感兴趣。我对微博以及Phthon都有点兴趣，就去试了下Python的微博SDK，这个SDK不是官方在维护，而是个大牛@廖雪峰 制作的，他还用这个SDK做了个Demo，可以跑在新浪的App Engineer上，开源的。于是我就参考在他公布出来的文档开始做了。微博SDK以及oAuth2.0，我还是比较了解的，不过我当时还是遇到两个问题，特记录下来，给别人参考。1. 在上传完">
+<meta name="keywords" content="mini weibo,phtyon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何用开源的mini weibo来搭个自己的应用">
+<meta property="og:url" content="http://yoursite.com/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="做这个事情和写这篇博文纯粹是感兴趣。我对微博以及Phthon都有点兴趣，就去试了下Python的微博SDK，这个SDK不是官方在维护，而是个大牛@廖雪峰 制作的，他还用这个SDK做了个Demo，可以跑在新浪的App Engineer上，开源的。于是我就参考在他公布出来的文档开始做了。微博SDK以及oAuth2.0，我还是比较了解的，不过我当时还是遇到两个问题，特记录下来，给别人参考。1. 在上传完">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png">
+<meta property="og:updated_time" content="2018-04-11T03:59:19.081Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何用开源的mini weibo来搭个自己的应用">
+<meta name="twitter:description" content="做这个事情和写这篇博文纯粹是感兴趣。我对微博以及Phthon都有点兴趣，就去试了下Python的微博SDK，这个SDK不是官方在维护，而是个大牛@廖雪峰 制作的，他还用这个SDK做了个Demo，可以跑在新浪的App Engineer上，开源的。于是我就参考在他公布出来的文档开始做了。微博SDK以及oAuth2.0，我还是比较了解的，不过我当时还是遇到两个问题，特记录下来，给别人参考。1. 在上传完">
+<meta name="twitter:image" content="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/" class="article-date">
+  <time datetime="2013-06-15T07:42:50.000Z" itemprop="datePublished">2013-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>►<a class="article-category-link" href="/categories/App/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何用开源的mini weibo来搭个自己的应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>做这个事情和写这篇博文纯粹是感兴趣。<br>我对微博以及Phthon都有点兴趣，就去试了下Python的微博SDK，这个SDK不是官方在维护，而是个大牛@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> 制作的，他还用这个SDK做了个Demo，可以跑在新浪的App Engineer上，开源的。于是我就参考在他公布出来的文档开始做了。<br>微博SDK以及oAuth2.0，我还是比较了解的，不过我当时还是遇到两个问题，特记录下来，给别人参考。<br>1. 在上传完代码到SAE之后，进入<a href="http://pingmoo.sinaapp.com/" target="_blank" rel="noopener">http://yourappname.sinaapp.com/</a> 登录你的应用，点击“用新浪微博登录”，却提示如下错误<br><a href="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png" target="_blank" rel="noopener"><img src="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png" alt="redirect_url_mismatch">
+</a><br>我当时太困了，没认真看那错误，还发邮件去问@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> ，不过第二天早上在床上时我就想明白是什么原因了。@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> 在邮件里也只告诉我原因，并没有告诉我在哪里改回调页面。然后我花了很长时间，把python的代码看了个遍，终于在urls.py这文件的最后两行，找到了修改的地方，上传代码后可以用，泪流满面。</p>
+<p>2. 虽然可以发微博了，但是微博显示的来源却还是mini weibo，这很奇怪，它拿了我的app key和app secrect，却显示的是别人的应用名称。然后我再去问@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> ，他给我的回复我觉得不对，于是我就自己折腾。我发现SQL的user表格中，是没有记录的，这里理应记录着用了这个应用的人才对。另一点，我把微博中我的应用里，把mini weibo取消授权，但是我重新接入时，它居然又出现在我的应用里，而不是我自个申请的应用。真是太奇怪了。经过我不断尝试，找到问题的原因了，得把回调页面从<a href="http://sinaweibopy.sinaapp.com/callback" target="_blank" rel="noopener">http://sinaweibopy.sinaapp.com/callback</a> 改变自个的回调页面 <a href="http://yourappname.sinaapp.com/callback" target="_blank" rel="noopener">http://yourappname.sinaapp.com/callback</a></p>
+<p>3. 还有一点是，把代码上传到SAE传不上去，原来得先在根目录新建一个文件夹，命名为1，然后把所有的源代码放在1这个文件夹下面，这样才行。因为一个SAE里可能会有多个版本的软件，所以他们用根目录的文件夹来区分当时使用的是哪个版本的软件，这个可以在SAE后台设置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/" data-id="cjfukgdtx0054qoz17l2zuevy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phtyon/">phtyon</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/06/24/e6-96-b0-e6-81-8b-e7-88-b1-e6-97-b6-e4-bb-a3-e8-a7-82-e5-90-8e-e6-84-9f/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          新恋爱时代 观后感
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/06/12/e7-ac-94-e8-ae-b0-e6-9c-ac-ef-bc-88-e5-ae-8f-e5-9f-ba4741g-ef-bc-89-e5-8d-87-e7-ba-a7-e4-b8-ba-e5-9b-ba-e6-80-81-e7-a1-ac-e7-9b-98/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">笔记本（宏基4741G）升级为固态硬盘</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/IT/">IT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Python/">Python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/UI/">UI</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMLCSS/">HTMLCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/Skill/">Skill</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ObjectC/">ObjectC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenGL/">OpenGL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Phone/">Phone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity3D/">Unity3D</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Verified/">Verified</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-glass/">google glass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/makerfair/">makerfair;</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/order/">order</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phtyon/">phtyon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uber-shenzhen/">uber shenzhen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LG-HBS-730/" style="font-size: 10px;">LG HBS 730</a> <a href="/tags/LG-HBS-800/" style="font-size: 10px;">LG HBS 800</a> <a href="/tags/Oculus/" style="font-size: 10px;">Oculus</a> <a href="/tags/Paypal/" style="font-size: 10px;">Paypal</a> <a href="/tags/Verified/" style="font-size: 10px;">Verified</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cpanel/" style="font-size: 10px;">cpanel</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/google-glass/" style="font-size: 10px;">google glass</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/makerfair/" style="font-size: 10px;">makerfair;</a> <a href="/tags/mini-weibo/" style="font-size: 10px;">mini weibo</a> <a href="/tags/order/" style="font-size: 10px;">order</a> <a href="/tags/phtyon/" style="font-size: 10px;">phtyon</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/uber-shenzhen/" style="font-size: 10px;">uber shenzhen</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hexo-httprequestexception-encountered-could-not-read-username-for-httpsgithub-com/">Hexo, HttpRequestException encountered, could not read Username for &#39;https://github.com&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/e9-a6-99-e6-b8-af-e7-99-be-e4-bd-b3-e7-ba-bf-e4-b8-8a-e8-b4-ad-e7-89-a9-e4-bd-93-e9-aa-8c/">香港百佳线上购物体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/windows-10-e6-9b-b4-e6-96-b0-e9-94-99-e8-af-af-0x800f081f-e7-9a-84-e8-a7-a3-e5-86-b3-e5-8a-9e-e6-b3-95/">Windows 10 更新错误 0x800f081f 的解决办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

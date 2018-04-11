@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/9/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-command-cc-failed-with-exit-status-69" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/01/command-cc-failed-with-exit-status-69/" class="article-date">
+  <time datetime="2017-01-01T10:40:02.000Z" itemprop="datePublished">2017-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/01/command-cc-failed-with-exit-status-69/">command &#39;cc&#39; failed with exit status 69</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Environment：Mac OS 10.12.2, Python 2.7.10<br>On terminal and use pip to install mysql-python (virtualenv is activate), but it get a error</p>
+<p>command ‘cc’ failed with exit status 69</p>
+<p>reference link: <a href="http://stackoverflow.com/questions/19769648/cant-install-discount-with-pip-error-command-cc-failed-with-exit-status-1" target="_blank" rel="noopener">http://stackoverflow.com/questions/19769648/cant-install-discount-with-pip-error-command-cc-failed-with-exit-status-1</a><br>I need to use xcode-select to install Xcode Command Line Tools</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/01/command-cc-failed-with-exit-status-69/" data-id="cjfukgdlj001hqoz14rixx2dg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-python-snimissingwarning-insecureplatformwarning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/28/python-snimissingwarning-insecureplatformwarning/" class="article-date">
+  <time datetime="2016-12-28T06:32:21.000Z" itemprop="datePublished">2016-12-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/python-snimissingwarning-insecureplatformwarning/">python SNIMissingWarning InsecurePlatformWarning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：CentOS 6.8, Python 2.6.6</p>
+<p>敲一些命令时，比如 pip list时，会提示：</p>
+<p><pre class="lang:default decode:true">/usr/lib/python2.6/site-packages/pip/<em>vendor/requests/packages/urllib3/util/<br>ssl</em>.py:318: SNIMissingWarning: An HTTPS request has been made, but the<br>SNI (Subject Name Indication) extension to TLS is not available on this<br>platform. This may cause the server to present an incorrect TLS<br>certificate, which can cause validation failures. You can upgrade to a<br>newer version of Python to solve this. For more information, see<br><a href="https://urllib3.readthedocs.io/en/latest/security.html#snimissingwarning" target="_blank" rel="noopener">https://urllib3.readthedocs.io/en/latest/security.html#snimissingwarning</a>.<br>  SNIMissingWarning<br>/usr/lib/python2.6/site-packages/pip/<em>vendor/requests/packages/urllib3/util/<br>ssl</em>.py:122: InsecurePlatformWarning: A true SSLContext object is not available.<br>This prevents urllib3 from configuring SSL appropriately and may cause certain<br>SSL connections to fail. You can upgrade to a newer version of Python to solve<br>this. For more information, see <a href="https://urllib3.readthedocs.io/en/latest/" target="_blank" rel="noopener">https://urllib3.readthedocs.io/en/latest/</a><br>security.html#insecureplatformwarning.<br>  InsecurePlatformWarning</pre><br>解决办法是安装</p>
+<p><pre class="lang:default decode:true ">pip install pyopenssl ndg-httpsclient pyasn1</pre><br>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/12/28/python-snimissingwarning-insecureplatformwarning/" data-id="cjfukge2q00c4qoz1oy15q416" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-error-command-gcc-failed-with-exit-status-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/28/error-command-gcc-failed-with-exit-status-1/" class="article-date">
+  <time datetime="2016-12-28T06:14:09.000Z" itemprop="datePublished">2016-12-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/error-command-gcc-failed-with-exit-status-1/">error: command &#39;gcc&#39; failed with exit status 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：CentOS 6.8， python 2.6.6,  virtualenv 15.1.0</p>
+<p>我是在virtualenv里，想要在里面安装mysql-python，但老报错</p>
+<p><pre class="lang:default decode:true">error: command ‘gcc’ failed with exit status 1</pre><br>参考文章：<a href="http://blog.csdn.net/fenglifeng1987/article/details/38057193" target="_blank" rel="noopener">http://blog.csdn.net/fenglifeng1987/article/details/38057193</a><br>退出virtualenv</p>
+<p><pre class="lang:default decode:true">deactivate</pre><br>然后输入以下命令</p>
+<p><pre class="lang:default decode:true">yum install gcc libffi-devel python-devel openssl-devel</pre><br>不过这三个东西分别是什么用途呢？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/12/28/error-command-gcc-failed-with-exit-status-1/" data-id="cjfukgdz5009hqoz1unsaaff5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-projectsend-centos-e9-85-8d-e7-bd-ae" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/18/projectsend-centos-e9-85-8d-e7-bd-ae/" class="article-date">
+  <time datetime="2016-12-18T08:46:28.000Z" itemprop="datePublished">2016-12-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/18/projectsend-centos-e9-85-8d-e7-bd-ae/">ProjectSend CentOS配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：</p>
+<p>CentOS 6.8，Apache 2.2，MySQL 5.1，PHP 5.3，ProjectSend r754</p>
+<p>ProjectSend介绍：</p>
+<p>用来分享文件的一个开源软件，可以指定文件可以由哪些人下载等。具体见官网：<a href="http://www.projectsend.org" target="_blank" rel="noopener">www.projectsend.org</a></p>
+<p>LAMP环境搭建：</p>
+<p>我是拿了一台旧的笔记本来安装CentOS的，版本是6.5，操作yum -y update 后就给升到6.8了。这个过程非常久，约有半个小时吧。我是通过一台Windows电脑ssh登录到CentOS上安装的。</p>
+<p>参考链接：<a href="https://www.rosehosting.com/blog/how-to-install-projectsend-on-centos-6/" target="_blank" rel="noopener">How to install ProjectSend on CentOS 6</a></p>
+<p>Apache安装后得在本地测一下，看看能否打得开Apache的测试网页。会有一个问题是在CentOS的浏览器上可以打得开，而我在局域网内的Windows打不开。原因是CentOS的iptables设置。</p>
+<p>参考链接：<a href="http://www.binarytides.com/open-http-port-iptables-centos/" target="_blank" rel="noopener">Open http port ( 80 ) in iptables on CentOS</a></p>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-basic-iptables-firewall-on-centos-6" target="_blank" rel="noopener">How To Set Up a Basic Iptables Firewall on Centos 6</a></p>
+<p>MySQL：5.1的版本也够ProjectSend用，所以就没有去折腾更新的版本。</p>
+<p>PHP</p>
+<p>参考链接：<a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-6" target="_blank" rel="noopener">How To Install Linux, Apache, MySQL, PHP (LAMP) stack On CentOS 6</a></p>
+<p>上面链接中有提到一个测试PHP是否安装好的测试方法。</p>
+<p>ProjectSend配置：这个倒还简单，只需要改一下配置文件<a href="https://www.rosehosting.com/blog/how-to-install-projectsend-on-centos-6/" target="_blank" rel="noopener">How to install ProjectSend on CentOS 6</a>，配置数据库等信息。</p>
+<p>主要时间花在Apache的配置上，我已经可以在Windows上访问到Apache的测试页面，也可以访问到PHP的测试页面，但就是配不好ProjectSend。</p>
+<p>首先是Apache的配置文件httpd.conf，这个配置文件很长，其实有改动的就是在配置文件的最后，去掉了一个注释，加了个virtualhost，其实就是<a href="https://www.rosehosting.com/blog/how-to-install-projectsend-on-centos-6/" target="_blank" rel="noopener">How to install ProjectSend on CentOS 6</a> 里讲的配置。只不过它这里的”allow from all”我改成了”Allow from all”。</p>
+<p>我之前在用Xftp备份过httpd.conf，有一次想还原httpd.conf，就删了httpd.conf，然后把备份的上传，结果就因为Linux中权限无法重启httpd服务。需要通过chmod来改。网上不少人遇到同样的问题。</p>
+<p>403错误：</p>
+<p>这个错误是权限的问题。要去看Apache的error log，打开log看就知道是哪里的权限有问题。我的ProjectSend包是用CentOS的xxx帐号下载在/home/xxx/Downloads下，然后mv（移动）到/var/www/html/projectsend 。后面嫌经常权限不够，就直接用root登上来，不知道在这中间怎么产生了权限问题。解决办法就是我把/var/www/html/projectsend 给删掉了，重新wget下来解压。</p>
+<p>也可以改权限，用chmod命令。</p>
+<p>用Xshell和Xftp也是很容易改Permission。</p>
+<p>500错误：</p>
+<p>Apache的配置文件没配置好，有些配置命令是2.4版本，在2.2中不能用。</p>
+<p><a href="http://unix.stackexchange.com/questions/121001/how-to-upgrade-apache-2-2-15-to-2-4-4-in-centos" target="_blank" rel="noopener">How to upgrade Apache 2.2.15 to 2.4.4 in CentOS</a></p>
+<p><a href="http://stackoverflow.com/questions/21385818/apache-authtype-not-set-internal-500-error" target="_blank" rel="noopener">Apache AuthType Not set <em>Internal 500 Error</em></a></p>
+<p>我ProjectSend安装好后，还是遇到了个问题，我无法上传文件。猜测是文件权限的问题，就把ProjectSend和其目录upload下的权限都改成777后就可以了。</p>
+<p>其它参考链接：<a href="https://segmentfault.com/a/1190000003049498" target="_blank" rel="noopener">CentOS 6.5/6.6 安装（install）mysql 5.7 最完整版教程</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/12/18/projectsend-centos-e9-85-8d-e7-bd-ae/" data-id="cjfukge2a00bsqoz1r4662740" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-wordpress-e6-8f-92-e5-85-a5-e7-9a-84-e5-9b-be-e7-89-87-e5-a4-aa-e9-95-bf" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/27/wordpress-e6-8f-92-e5-85-a5-e7-9a-84-e5-9b-be-e7-89-87-e5-a4-aa-e9-95-bf/" class="article-date">
+  <time datetime="2016-11-27T12:01:21.000Z" itemprop="datePublished">2016-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/wordpress-e6-8f-92-e5-85-a5-e7-9a-84-e5-9b-be-e7-89-87-e5-a4-aa-e9-95-bf/">Wordpress插入的图片太长</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我Wordpress用的主题是Twenty Ten，图床是Cloudup。插入图片时，如果图片太长的话，会导致图片超出文本范围。像下图这样。</p>
+<p><a href="https://cloudup.com/iNrNJ6F63j6" target="_blank" rel="noopener">https://cloudup.com/iNrNJ6F63j6</a></p>
+<p>解决办法就是去改TwentyTen主题的代码，</p>
+<p><pre class="lang:css decode:true ">.entry-content a img{<br>    width: inherit;<br>    height: auto;<br>    max-width: 640px;<br>}</pre><br><a href="https://cloudup.com/iMu9QEnhBiv" target="_blank" rel="noopener">https://cloudup.com/iMu9QEnhBiv</a></p>
+<p>&nbsp;</p>
+<p>==========2017-10-11更新=================</p>
+<p>最近发现比较长的图片还是会超过博客的内容区域。我猜测可能是主题更新后覆盖了原先我修改的代码，所以就失效了。只好针对新的主题中的CSS代码再次修改。但发现按原来的改法已经无效了。</p>
+<p>在Chrome中打开有问题的网页，进入开发者模式。按下图操作，即可找到控制图片的CSS代码。原来的代码中只有一行border，我多加了三行。</p>
+<p><pre class="lang:default decode:true">a img {<br>    border: none;<br>}</pre></p>
+<p><pre class="lang:default decode:true">a img {<br>    border: none;<br>    width: 100%;<br>    max-width: 640px;<br>    height: auto;<br>}</pre><br><a href="https://cloudup.com/i-3EZcIfx1i" target="_blank" rel="noopener">https://cloudup.com/i-3EZcIfx1i</a></p>
+<p>进入wordpress后台Dashboard，在Appearance的Editor中，可以找到该主题的CSS代码。</p>
+<p>另外改完后，还需要强制刷新网页（Ctrl + F5）才能看到改完后的效果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/27/wordpress-e6-8f-92-e5-85-a5-e7-9a-84-e5-9b-be-e7-89-87-e5-a4-aa-e9-95-bf/" data-id="cjfukge5a00e7qoz1z87dihwq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-wordpress-e4-bb-a3-e7-a0-81-e6-8f-92-e4-bb-b6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/27/wordpress-e4-bb-a3-e7-a0-81-e6-8f-92-e4-bb-b6/" class="article-date">
+  <time datetime="2016-11-27T08:34:08.000Z" itemprop="datePublished">2016-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/27/wordpress-e4-bb-a3-e7-a0-81-e6-8f-92-e4-bb-b6/">wordpress代码插件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我这用的是Crayon Syntax Highlighter，安装完插件后，在编辑中和”Text”中选择”crayon”，在弹出来的页面中插入代码即可。</p>
+<p><a href="https://cloudup.com/iuz64Qf80uX" target="_blank" rel="noopener">https://cloudup.com/iuz64Qf80uX</a></p>
+<p>下面是随便插的一段Objective-C测试代码。</p>
+<pre class="lang:objc decode:true">-(AliVcAccesskey*)getAccessKeyIDSecret
+{
+    AliVcAccesskey* accessKey = [[AliVcAccesskey alloc] init];
+    accessKey.accessKeyId = accessKeyID;
+    accessKey.accessKeySecret = accessKeySecret;
+    return accessKey;
+}
+</pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/27/wordpress-e4-bb-a3-e7-a0-81-e6-8f-92-e4-bb-b6/" data-id="cjfukge5800e4qoz15pp5v6m2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-lg-hbs-800-e8-93-9d-e7-89-99-e8-80-b3-e6-9c-ba-e6-80-8e-e4-b9-88-e6-a0-b7-ef-bc-9f" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/19/lg-hbs-800-e8-93-9d-e7-89-99-e8-80-b3-e6-9c-ba-e6-80-8e-e4-b9-88-e6-a0-b7-ef-bc-9f/" class="article-date">
+  <time datetime="2016-11-19T15:55:38.000Z" itemprop="datePublished">2016-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Phone/">Phone</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/19/lg-hbs-800-e8-93-9d-e7-89-99-e8-80-b3-e6-9c-ba-e6-80-8e-e4-b9-88-e6-a0-b7-ef-bc-9f/">LG HBS-800蓝牙耳机怎么样？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我是因为HBS-730坏了才要买800的。</p>
+<p>LG的这系列耳机中730是最便宜的，为什么我要买800呢。一是因为730的设计有问题，耳机线从U形的机身是垂直出来的，这个地方很容易弄坏。而800的耳机线跟U形的机身是平行出来的，这样不容易弄坏。二是因为800号称有降噪的功能。我买来时发现这功能完全是无效的，在地铁里用感觉没区别，冲着这功能买的同学就别考虑了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/19/lg-hbs-800-e8-93-9d-e7-89-99-e8-80-b3-e6-9c-ba-e6-80-8e-e4-b9-88-e6-a0-b7-ef-bc-9f/" data-id="cjfukge0z00axqoz18jdq7qi8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-80-8e-e6-a0-b7-e5-b0-86-e4-b8-aa-e4-ba-bawordpress-e5-8d-9a-e5-ae-a2-e6-94-b9-e4-b8-bahttps" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/19/e6-80-8e-e6-a0-b7-e5-b0-86-e4-b8-aa-e4-ba-bawordpress-e5-8d-9a-e5-ae-a2-e6-94-b9-e4-b8-bahttps/" class="article-date">
+  <time datetime="2016-11-19T15:47:49.000Z" itemprop="datePublished">2016-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT/">IT</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/19/e6-80-8e-e6-a0-b7-e5-b0-86-e4-b8-aa-e4-ba-bawordpress-e5-8d-9a-e5-ae-a2-e6-94-b9-e4-b8-bahttps/">怎样将个人wordpress博客改为https</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我的博客是用wordpress搭建在一个虚拟空间上的，现在想要全站改为https。解决办法就是用Let’s Encrypt。网上有很多资料讲得不全，我这里针对我遇到的情况说一下。</p>
+<p>参考资料：<a href="http://www.chinaz.com/web/2016/0216/504896.shtml" target="_blank" rel="noopener">SSL For Free 免费 SSL 凭证申请 Let’s Encrypt简单教学</a></p>
+<p><a href="http://www.itbulu.com/cpanel-ssl.html" target="_blank" rel="noopener">cPanel面板安装SSL证书及cPanel一键安装Let’s Encrypt免费SSL方法</a></p>
+<p>大致流程是得申请一个证书，然后把这个证书配置到虚拟空间的cPanel上，最后把博客中用到的图片等链接从http改为https。</p>
+<p>我初步看了下Let’s Encrypt，觉得文档太复杂，因为它还介绍VPS的情况。然后看到<a href="https://www.sslforfree.com/" target="_blank" rel="noopener">https://www.sslforfree.com/</a>的教程，觉得蛮方便。</p>
+<p>在cPanel中配置完后，在chrome中打开我的域名linminquan.com，还是http（原因后面会解释）（我的域名是直接跳到linminquan.com/blog）。但我发现我在地址栏里输入<a href="https://linminquan.com/blog是可以在chrome中显示https的，然后就发现一篇一篇打开博文，chrome会提示哪些文章是可以https，哪些不行。不行的原因在于我在博客里外链的图片是http，于是手动改成支持https的图床。折腾了好久，终于每个博客文章都改好了。" target="_blank" rel="noopener">https://linminquan.com/blog是可以在chrome中显示https的，然后就发现一篇一篇打开博文，chrome会提示哪些文章是可以https，哪些不行。不行的原因在于我在博客里外链的图片是http，于是手动改成支持https的图床。折腾了好久，终于每个博客文章都改好了。</a></p>
+<p>但有个问题，我在本机的chrome地址栏上直接敲linminquan.com是不行的，但在本机的safari、我Windows机器的chrome和edge上、在iPhone iPad的safari、在安卓的浏览器中都是可以显示https的。最后解决办法是我执行了chrome的Clear Browsing Data功能。</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/19/e6-80-8e-e6-a0-b7-e5-b0-86-e4-b8-aa-e4-ba-bawordpress-e5-8d-9a-e5-ae-a2-e6-94-b9-e4-b8-bahttps/" data-id="cjfukgdum005tqoz1d7sjfquy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/">https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssl/">ssl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-remote-desktop-connection-cannot-verify-the-identity-of-the-computer-that-you-want-to-connect-to" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/13/remote-desktop-connection-cannot-verify-the-identity-of-the-computer-that-you-want-to-connect-to/" class="article-date">
+  <time datetime="2016-10-13T09:18:40.000Z" itemprop="datePublished">2016-10-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/13/remote-desktop-connection-cannot-verify-the-identity-of-the-computer-that-you-want-to-connect-to/">Remote Desktop Connection cannot verify the identity of the computer that you want to connect to.</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>环境：从Mac 10.12 (Sierra) 远程登录到局域网内的Windows 10 电脑。</p>
+<p>用的是 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=18140" target="_blank" rel="noopener">Microsoft Remote Desktop Connection Client for Mac 2.1.1</a> ，然后会报错 Remote Desktop Connection cannot verify the identity of the computer that you want to connect to.</p>
+<p>后来发现微软是有在Mac App Store 发布他们的远程登录软件的，叫 <a href="https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417" target="_blank" rel="noopener">Microsoft Remote Desktop</a> ，只是这个软件居然不在中国区上架，真是奇怪。用美国区的Apple ID登录下载后问题就解决了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/13/remote-desktop-connection-cannot-verify-the-identity-of-the-computer-that-you-want-to-connect-to/" data-id="cjfukge2o00c2qoz1669a9yeg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-oculus-ask-for-update-your-billing-information-with-a-e2-80-9cverified-e2-80-9d-paypal-account" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/27/oculus-ask-for-update-your-billing-information-with-a-e2-80-9cverified-e2-80-9d-paypal-account/" class="article-date">
+  <time datetime="2016-04-27T06:29:48.000Z" itemprop="datePublished">2016-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/27/oculus-ask-for-update-your-billing-information-with-a-e2-80-9cverified-e2-80-9d-paypal-account/">Oculus ask for update your billing information with a “verified” PayPal account</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>下面是Oculus发来的邮件。</p>
+<p>We need to verify a few additional details to finalize your shipment. Before we can process your order, we need you to create or connect a “verified” PayPal billing account so we can confirm your shipping address. Please note that we do not support freight forwarding or concierge services and will be unable to provide additional product support for Oculus products once delivered to their original destination, or otherwise in an unsupported country/region.</p>
+<p>Please proceed to the Oculus Order History page located at <a href="https://shop.oculus.com/history" target="_blank" rel="noopener">https://shop.oculus.com/history</a> to update your billing information with a “verified” PayPal account. If your billing information has not been updated by May 6th at 11:59pm PDT, we will be required to cancel your Oculus Rift order and we will be unable to restore it.</p>
+<p>Oculus Rift是我在网上预订后寄到一个在美国的朋友那，让他帮忙收货然后寄回国内。我预订时用的是国内的Visa信用卡。下面是网上的两个讨论链接。</p>
+<p><a href="https://www.reddit.com/r/oculus/comments/4g0txa/oculus_asked_me_to_change_my_billing_to_paypal/" target="_blank" rel="noopener">https://www.reddit.com/r/oculus/comments/4g0txa/oculus_asked_me_to_change_my_billing_to_paypal/</a></p>
+<p><a href="https://forums.oculus.com/community/discussion/34865/verified-paypal-billing-account" target="_blank" rel="noopener">https://forums.oculus.com/community/discussion/34865/verified-paypal-billing-account</a></p>
+<p>Oculus想要我用Verified的Paypal来付款，而且Paypal上的地址应该得和Oculus Oder上的一样。不太想麻烦美国朋友，我尝试注册了个Paypal，地址填中国，然后用银联卡Verified了。想改地址时发现地址无法改为美国的。但如果注册Paypal时填的地址是美国，但其实我没有美国的银行卡，这样就无法来Verified了。看来Oculus这一招可以真正限制一些用转运公司来买的人。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/04/27/oculus-ask-for-update-your-billing-information-with-a-e2-80-9cverified-e2-80-9d-paypal-account/" data-id="cjfukge1s00beqoz1dr9dx95n" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Verified/">Verified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/order/">order</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/IT/">IT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Python/">Python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/UI/">UI</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMLCSS/">HTMLCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/Skill/">Skill</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ObjectC/">ObjectC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenGL/">OpenGL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Phone/">Phone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity3D/">Unity3D</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Verified/">Verified</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-glass/">google glass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/makerfair/">makerfair;</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/order/">order</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phtyon/">phtyon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uber-shenzhen/">uber shenzhen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LG-HBS-730/" style="font-size: 10px;">LG HBS 730</a> <a href="/tags/LG-HBS-800/" style="font-size: 10px;">LG HBS 800</a> <a href="/tags/Oculus/" style="font-size: 10px;">Oculus</a> <a href="/tags/Paypal/" style="font-size: 10px;">Paypal</a> <a href="/tags/Verified/" style="font-size: 10px;">Verified</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cpanel/" style="font-size: 10px;">cpanel</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/google-glass/" style="font-size: 10px;">google glass</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/makerfair/" style="font-size: 10px;">makerfair;</a> <a href="/tags/mini-weibo/" style="font-size: 10px;">mini weibo</a> <a href="/tags/order/" style="font-size: 10px;">order</a> <a href="/tags/phtyon/" style="font-size: 10px;">phtyon</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/uber-shenzhen/" style="font-size: 10px;">uber shenzhen</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hexo-httprequestexception-encountered-could-not-read-username-for-httpsgithub-com/">Hexo, HttpRequestException encountered, could not read Username for &#39;https://github.com&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/e9-a6-99-e6-b8-af-e7-99-be-e4-bd-b3-e7-ba-bf-e4-b8-8a-e8-b4-ad-e7-89-a9-e4-bd-93-e9-aa-8c/">香港百佳线上购物体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/windows-10-e6-9b-b4-e6-96-b0-e9-94-99-e8-af-af-0x800f081f-e7-9a-84-e8-a7-a3-e5-86-b3-e5-8a-9e-e6-b3-95/">Windows 10 更新错误 0x800f081f 的解决办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

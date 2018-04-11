@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/15/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/" class="article-date">
+  <time datetime="2013-06-15T07:42:50.000Z" itemprop="datePublished">2013-06-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>►<a class="article-category-link" href="/categories/App/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/">如何用开源的mini weibo来搭个自己的应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>做这个事情和写这篇博文纯粹是感兴趣。<br>我对微博以及Phthon都有点兴趣，就去试了下Python的微博SDK，这个SDK不是官方在维护，而是个大牛@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> 制作的，他还用这个SDK做了个Demo，可以跑在新浪的App Engineer上，开源的。于是我就参考在他公布出来的文档开始做了。<br>微博SDK以及oAuth2.0，我还是比较了解的，不过我当时还是遇到两个问题，特记录下来，给别人参考。<br>1. 在上传完代码到SAE之后，进入<a href="http://pingmoo.sinaapp.com/" target="_blank" rel="noopener">http://yourappname.sinaapp.com/</a> 登录你的应用，点击“用新浪微博登录”，却提示如下错误<br><a href="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png" target="_blank" rel="noopener"><img src="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_204120.png" alt="redirect_url_mismatch">
+</a><br>我当时太困了，没认真看那错误，还发邮件去问@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> ，不过第二天早上在床上时我就想明白是什么原因了。@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> 在邮件里也只告诉我原因，并没有告诉我在哪里改回调页面。然后我花了很长时间，把python的代码看了个遍，终于在urls.py这文件的最后两行，找到了修改的地方，上传代码后可以用，泪流满面。</p>
+<p>2. 虽然可以发微博了，但是微博显示的来源却还是mini weibo，这很奇怪，它拿了我的app key和app secrect，却显示的是别人的应用名称。然后我再去问@<a href="http://weibo.com/liaoxuefeng" title="廖雪峰" target="_blank" rel="noopener">廖雪峰</a> ，他给我的回复我觉得不对，于是我就自己折腾。我发现SQL的user表格中，是没有记录的，这里理应记录着用了这个应用的人才对。另一点，我把微博中我的应用里，把mini weibo取消授权，但是我重新接入时，它居然又出现在我的应用里，而不是我自个申请的应用。真是太奇怪了。经过我不断尝试，找到问题的原因了，得把回调页面从<a href="http://sinaweibopy.sinaapp.com/callback" target="_blank" rel="noopener">http://sinaweibopy.sinaapp.com/callback</a> 改变自个的回调页面 <a href="http://yourappname.sinaapp.com/callback" target="_blank" rel="noopener">http://yourappname.sinaapp.com/callback</a></p>
+<p>3. 还有一点是，把代码上传到SAE传不上去，原来得先在根目录新建一个文件夹，命名为1，然后把所有的源代码放在1这个文件夹下面，这样才行。因为一个SAE里可能会有多个版本的软件，所以他们用根目录的文件夹来区分当时使用的是哪个版本的软件，这个可以在SAE后台设置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/06/15/e5-a6-82-e4-bd-95-e7-94-a8-e5-bc-80-e6-ba-90-e7-9a-84mini-weibo-e6-9d-a5-e6-90-ad-e4-b8-aa-e8-87-aa-e5-b7-b1-e7-9a-84-e5-ba-94-e7-94-a8/" data-id="cjfukgdtx0054qoz17l2zuevy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/phtyon/">phtyon</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e7-ac-94-e8-ae-b0-e6-9c-ac-ef-bc-88-e5-ae-8f-e5-9f-ba4741g-ef-bc-89-e5-8d-87-e7-ba-a7-e4-b8-ba-e5-9b-ba-e6-80-81-e7-a1-ac-e7-9b-98" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/06/12/e7-ac-94-e8-ae-b0-e6-9c-ac-ef-bc-88-e5-ae-8f-e5-9f-ba4741g-ef-bc-89-e5-8d-87-e7-ba-a7-e4-b8-ba-e5-9b-ba-e6-80-81-e7-a1-ac-e7-9b-98/" class="article-date">
+  <time datetime="2013-06-12T09:35:17.000Z" itemprop="datePublished">2013-06-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>►<a class="article-category-link" href="/categories/Life/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/06/12/e7-ac-94-e8-ae-b0-e6-9c-ac-ef-bc-88-e5-ae-8f-e5-9f-ba4741g-ef-bc-89-e5-8d-87-e7-ba-a7-e4-b8-ba-e5-9b-ba-e6-80-81-e7-a1-ac-e7-9b-98/">笔记本（宏基4741G）升级为固态硬盘</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>终于下了很大决心把笔记本的机械硬盘换成固态硬盘，这是半个月多之前的事了，现在看来它运行良好，速度真不错。<br>原因：<br>之前有两个朋友买过，感觉效果不错；<br>在新公司里，装个大软件就费去了半天时间，装的有问题的话，就费了一天时间，实在受不了了。</p>
+<p>风险：<br>有可能把笔记本搞坏，我之前只加过内存，拆硬盘毕竟更危险些，后面发现我还得刷BIOS；<br>买的是三星840，不是Pro版，担心用一段时间就坏了，好在我之前也有朋友买的是这个型号。</p>
+<p>花费：<br>加上了光驱位的托架（别买错了，有一种是给台式机用的托架，我买的是给笔记本用的光驱托架），128GB，当时亚马逊的比京东便宜，七百多一些，比新买一台机子便宜多了，而且现在四五千的新机器，也都不配固态硬盘。</p>
+<p>装好后，我的硬盘得分是7.4分，开机时间20秒左右。在装系统、VS、Office等大软件时，感觉很明显。</p>
+<p>注意事项：<br>装系统前把BIOS中硬盘模式改为AHCI；<br>必要时刷BIOS到官方最新版本，之前以为刷BIOS很难，后来才知道非常简单；<br>不能对固态硬盘进行碎片整理；<br>推荐预先买个大容量U盘来装系统，我买的是金士顿USB3.0 16G的，给U盘做个PE，我当时用的是老毛桃，后来干脆把系统装成英文版的；<br>我只分一个区，把软件都装在上面，我现在都不推荐分太多区；<br>当时有遇到一个步骤我做不下去了，参考的帖子里也没有介绍，吓坏我了：我当时在拆下硬盘后，发现我的SSD装上去时明显空间不对，怎么空出一小块空间来呢，而且SSD金手指部分跟笔记本的金手指不能接触到。后来认真研究了下，原来机械硬盘的顶部，即金手指的那部分是有一个突出来的东西的“接头”，我发现可以把那个东西拆下来，然后给SSD用，而光驱位托架那已经有那个东西了，机械硬盘刚好可以放进去。<br>下图中红框内的部分就是我说的那个“接头”<br><a href="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_173211.png" target="_blank" rel="noopener"><img src="http://linminquan.com/blog/wp-content/uploads/2013/06/2013-06-12_173211.png" alt="SSD"></a></p>
+<p>&nbsp;</p>
+<p>参考链接：<br><a href="http://nbbbs.zol.com.cn/43/218_429068.html" title="（分享）4741g换固态硬盘+HDD光驱托架教程，多图" target="_blank" rel="noopener">（分享）4741g换固态硬盘+HDD光驱托架教程，多图</a><br><a href="http://bbs.duowan.com/thread-20197676-1-1.html" title="固态硬盘注意事项" target="_blank" rel="noopener">固态硬盘注意事项</a><br><a href="http://diy.pconline.com.cn/cpu/study_cpu/1203/2722291_all.html" title="越用越慢?谈谈使用SSD的几个注意事项" target="_blank" rel="noopener">越用越慢?谈谈使用SSD的几个注意事项</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/06/12/e7-ac-94-e8-ae-b0-e6-9c-ac-ef-bc-88-e5-ae-8f-e5-9f-ba4741g-ef-bc-89-e5-8d-87-e7-ba-a7-e4-b8-ba-e5-9b-ba-e6-80-81-e7-a1-ac-e7-9b-98/" data-id="cjfukgdx60086qoz1rreh3uv1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-9c-80-e8-bf-91-e5-85-b3-e4-ba-8e-e7-94-a8-e6-88-b7-e4-bd-93-e9-aa-8c-e7-9a-84-e6-84-9f-e6-83-b3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/21/e6-9c-80-e8-bf-91-e5-85-b3-e4-ba-8e-e7-94-a8-e6-88-b7-e4-bd-93-e9-aa-8c-e7-9a-84-e6-84-9f-e6-83-b3/" class="article-date">
+  <time datetime="2013-05-21T13:19:26.000Z" itemprop="datePublished">2013-05-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>►<a class="article-category-link" href="/categories/Life/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/21/e6-9c-80-e8-bf-91-e5-85-b3-e4-ba-8e-e7-94-a8-e6-88-b7-e4-bd-93-e9-aa-8c-e7-9a-84-e6-84-9f-e6-83-b3/">最近关于用户体验的感想</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.今天在京东下单时，提醒我地址不全，我看了下，居然要求把地址具体到南山区的哪个知道，我操，我哪知道是属于哪个街道呀，只得各种搜索。在最后快付款的节骨眼上，居然让用户这么麻烦，京东难道不知道亚马逊有一键下单吗？<br>其实这种情况我不是第一次遇到，在上海的时候，我下单，它居然要是填是内环还是外环，我哪知道是内环还是外环，真是烦人，记得当时没搜到结果，只得跑去问上海本地的同事。<br>其实京东要把地址细化的做法可以理解，可是，你就不能智能提示用户送货地址是属于哪个街道吗？或者做一个查询工具。<br>而我在深圳第一次在亚马逊下单时，它居然智能提醒我的邮编错了，哇靠，真牛逼。</p>
+<p>2.超市里会有用来装水果或散装饼等东西的白色袋子，都是弄成圆柱形放在那里，顾客需要时自己去撕一张下来。可是超市的工作人员有没有发现，要把撕下来的袋子分开来，好让东西可以放进去，我们得用指甲在那扣半天，还不一定能搞定。特别是那种用来装散装饼干的，可以直接接触食物的袋子，超级难弄开。我看不得以，弄了点口水后才把袋子弄开。这让我想起了有些年纪大的人数钱时，会沾点口水。<br>超市的工作人员就不能在袋子旁边弄点水，并提示用户使用吗？</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/05/21/e6-9c-80-e8-bf-91-e5-85-b3-e4-ba-8e-e7-94-a8-e6-88-b7-e4-bd-93-e9-aa-8c-e7-9a-84-e6-84-9f-e6-83-b3/" data-id="cjfukgdvy0075qoz1k2f6de0j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-svn-e5-92-8cgit-e7-9a-84-e6-af-94-e8-be-83-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/20/svn-e5-92-8cgit-e7-9a-84-e6-af-94-e8-be-83-2/" class="article-date">
+  <time datetime="2013-05-20T14:50:53.000Z" itemprop="datePublished">2013-05-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/20/svn-e5-92-8cgit-e7-9a-84-e6-af-94-e8-be-83-2/">SVN和Git的比较</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近开始学Git，跟以前常用的SVN来做个对比，以便对双方的优缺点了解更多些。</p>
+<p>其实Git和SVN还是挺像的，都有提交，合并等操作，看来这是源码管理工具的基本操作。</p>
+<p>&nbsp;</p>
+<p>1. Git是分布式的，SVN是集中式的，好处是跟其他同事不会有太多的冲突，自己写的代码放在自己电脑上，一段时间后再提交、合并，也可以不用联网在本地提交；</p>
+<p>2. Git下载下来后，在本地不必联网就可以看到所有的log，很方便学习，SVN却需要联网；</p>
+<p>3. Git鼓励分Branch，而SVN，说实话，我用Branch的次数还挺少的，SVN自带的Branch merge我还真没用过，有merge时用的是Beyond Compare工具合并后再Commit的；</p>
+<p>4. Tortoise也有出Git版本，真是好东西；</p>
+<p>5. SVN在Commit前，我们都建议是先Update一下，跟本地的代码编译没问题，并确保开发的功能正常后再提交，这样其实挺麻烦的，有好几次同事没有先Updata，就<br>Commit了，发生了一些错误，耽误了大家时间，Git可能这种情况会少些。</p>
+<p>&nbsp;</p>
+<p>大家也可以搜一搜Git和SVN命令的比对。</p>
+<p>&nbsp;</p>
+<p>下面有一篇文章这样讨论，楼主认为SVN没什么用，我比较认同Ghoststears的观点。</p>
+<p><a href="http://bbs.csdn.net/topics/310073176" target="_blank" rel="noopener">有了GIT，SVN纯粹一垃圾 </a></p>
+<p>Ghoststears：</p>
+<p><span style="color: #3366ff;">任何事情，归根结底都是人的问题，工具只是工具。</span></p>
+<p><span style="color: #3366ff;">SVN 是集中式的，会出现你说的耦合。但从另外一个方面来说，这也要求开发人员代码的规范：不要一个函数干很多事情，不要一个文件写很多个类。</span></p>
+<p><span style="color: #3366ff;">另外，将不可运行的代码提交到任何版本控制系统中都是没有意义的。这也就是版本控制的核心思想之一。也就是提交的粒度：原子性。所谓的原子性，也就是完成一件任务，这个任务可以是一个函数声明，也可以是一个函数的实现，亦或是一个子系统。但这个任务的完成的标志就是代码可以运行，不能运行的代码，最多也就是完成了半个任务。这个是不符合版本控制思想的。试想，你 update 到某一个 version 的时候，代码竟然是不能运行的，是何心情？？？</span></p>
+<p><span style="color: #3366ff;">将不能运行的代码提交，完全是开发人员素质或者公司管理流程、机制的问题。</span></p>
+<p><span style="color: #3366ff;">另外，很多人都强调：我晚上下班了要在家里干活，不能提交！！！来抨击集中式版本控制工具。且不说对待工作和生活态度。先看看国内的企业，防员工如防贼的多的去了。有多少人能带着笔记本，把公司的源代码签出来呢？？？</span></p>
+<p><span style="color: #3366ff;">版本控制系统中，工具只是其中一环。要结合公司的策略来选用合适的工具。版本控制 != 版本控制工具 !!!= 源代码管理。</span></p>
+<p><span style="color: #3366ff;">最后，人各有喜好。上纲上线的，完全没有必要。</span></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/05/20/svn-e5-92-8cgit-e7-9a-84-e6-af-94-e8-be-83-2/" data-id="cjfukge3800cmqoz1t2mzltmc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-88-86-e4-ba-ab-e4-b8-80-e4-b8-aa-e6-8c-ba-e4-b8-8d-e9-94-99-e7-9a-84git-e8-a7-86-e9-a2-91-e6-95-99-e7-a8-8b" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/05/17/e5-88-86-e4-ba-ab-e4-b8-80-e4-b8-aa-e6-8c-ba-e4-b8-8d-e9-94-99-e7-9a-84git-e8-a7-86-e9-a2-91-e6-95-99-e7-a8-8b/" class="article-date">
+  <time datetime="2013-05-17T13:34:46.000Z" itemprop="datePublished">2013-05-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/05/17/e5-88-86-e4-ba-ab-e4-b8-80-e4-b8-aa-e6-8c-ba-e4-b8-8d-e9-94-99-e7-9a-84git-e8-a7-86-e9-a2-91-e6-95-99-e7-a8-8b/">分享一个挺不错的Git视频教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://down.51cto.com/zt/1530" target="_blank" rel="noopener">http://down.51cto.com/zt/1530</a></p>
+<p>&nbsp;</p>
+<p>解决了我以前的一些误区：</p>
+<p>以为只能用TortoiseSVN来操作SVN，却不知道还有命令行，导致以前做SVN服务端操作时出了一些问题，不知道怎么解决，当时网络上介绍的多是命令的教程；</p>
+<p>Git与SVN的区别，其实我是为了用用Github.com才写git；</p>
+<p>原来也有TortoiseGit这东西。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/05/17/e5-88-86-e4-ba-ab-e4-b8-80-e4-b8-aa-e6-8c-ba-e4-b8-8d-e9-94-99-e7-9a-84git-e8-a7-86-e9-a2-91-e6-95-99-e7-a8-8b/" data-id="cjfukgdrg003dqoz16sms4c08" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e5-9c-a8-e7-be-8e-e5-ae-9c-e4-bd-b3-e7-94-a8-e6-94-af-e4-bb-98-e5-ae-9d-e4-bb-98-e6-ac-be-e5-88-9d-e4-bd-93-e9-aa-8c" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/17/e5-9c-a8-e7-be-8e-e5-ae-9c-e4-bd-b3-e7-94-a8-e6-94-af-e4-bb-98-e5-ae-9d-e4-bb-98-e6-ac-be-e5-88-9d-e4-bd-93-e9-aa-8c/" class="article-date">
+  <time datetime="2013-04-17T15:14:47.000Z" itemprop="datePublished">2013-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>►<a class="article-category-link" href="/categories/App/Life/">Life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/17/e5-9c-a8-e7-be-8e-e5-ae-9c-e4-bd-b3-e7-94-a8-e6-94-af-e4-bb-98-e5-ae-9d-e4-bb-98-e6-ac-be-e5-88-9d-e4-bd-93-e9-aa-8c/">在美宜佳用支付宝付款初体验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天晚上在家附近（世界之窗附近）买东西，刚好路过一家美宜佳，瞥见店门玻璃上贴着支付宝的标记，于是很欣喜地进店问店员。</p>
+<p><a href="https://cloudup.com/iEQqTytFx44" target="_blank" rel="noopener">https://cloudup.com/iEQqTytFx44</a></p>
+<p>店员面露尴尬表情，说不支持支付宝，不过可以支持深圳通，我眼前一亮，那不就跟香港八达通差不多嘛？店里顾客不是很多，店员就帮我查了下系统，却有支付宝的方式，原来是需要支付宝跟手机绑定了才行，付款时在输密码的小键盘上输入手机号，我手机马上就收到了一条短信，短信上带着验证码，我把验证码再在小键盘上输入，即可完成交易。正常情况下应该完成交易的，只是那天不知道为什么没有交易成功，可能这是以前开发的功能，没人维护，也可能是傍晚网络繁忙。</p>
+<p>最后我用深圳通完成了支付。很奇怪的是店门口没有贴深圳通的标志，深圳通没有做这些推广，在美宜佳的官方微博（@美宜佳生活馆）里也没有搜到一条跟深圳通相关的内容。</p>
+<p>下面说说跟店员了解到的情况：<br>1.确实每天都花至少一个小时的时间在统计纸币硬币上；<br>2.如果可以用支付宝等方式支付，他觉得在安全性方面会非常好（美宜佳是24小时营业）；<br>3.支付宝和深圳通支付方面，他比较担心交易的速度，相同的网络下，深圳通应该比支付宝要快，毕竟用支付宝的话顾客这边的手机也要联网。他说在高峰的情况下，网络延迟会达到一两分钟。这里我很想问问其它朋友，现在这样类似pos的终端是不是只用GPRS方式，应该有其它3G方案吧，前段时间的微信信令问题中国移动叫得最大声，可见移动的数据网络已经快不行了；</p>
+<p>其实我很奇怪的是各地的交通卡进行小额支付应该会发展得非常好才对，毕竟银联消费时还要输密码，不过想想这些政府搞的东西肯定不会好到哪里去。</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/04/17/e5-9c-a8-e7-be-8e-e5-ae-9c-e4-bd-b3-e7-94-a8-e6-94-af-e4-bb-98-e5-ae-9d-e4-bb-98-e6-ac-be-e5-88-9d-e4-bd-93-e9-aa-8c/" data-id="cjfukgdt8004lqoz1g9zdpfzw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-strokeit-e6-89-8b-e5-8a-bf-e8-bd-af-e4-bb-b6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/04/01/strokeit-e6-89-8b-e5-8a-bf-e8-bd-af-e4-bb-b6/" class="article-date">
+  <time datetime="2013-04-01T05:33:58.000Z" itemprop="datePublished">2013-04-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/04/01/strokeit-e6-89-8b-e5-8a-bf-e8-bd-af-e4-bb-b6/">Strokeit手势软件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前就有看到同事在用手势来关闭软件，我当时就问，手势不是只能在浏览器里用嘛，怎么也可以关闭其它的软件，他说装了搜狗的某些软件后就可以对全部软件设置手势了。真是方便呀。可是要先装搜狗的软件，我就没装了。</p>
+<p>前段时间看到<a href="http://www.read.org.cn/html/2178-shan-yong-ke-ji-tong-guo-ruan-jian-lai-ti-sheng-ni-de-xiao-lv.html" target="_blank" rel="noopener">通过软件来提升你的效率</a>有提到Strokeit，就赶紧下来试用了下。<br>我一边看善用佳软写的<a href="http://xbeta.info/strokeit.htm" target="_blank" rel="noopener">StrokeIt:让鼠标手势无处不在</a>，一边试用，然后，我竟然感觉太复杂了，都不知道怎么实现在记事本软件上画个“L”的形状来实现关闭。</p>
+<p>研究了一会，还去载了别人分享出来的配置文件来导入。终于搞懂了。<br>这个软件把它分为三个层次，如下图，分别是指“应用程序”，“动作”，“命令”</p>
+<p><a href="https://cloudup.com/i0N1tO6F525" target="_blank" rel="noopener">https://cloudup.com/i0N1tO6F525</a></p>
+<p>这三个层次也分别对应文件菜单里的“添加新的应用程序”，“添加新的动作”和“添加新的命令”。</p>
+<p><a href="https://cloudup.com/i5a6LLvKVPP" target="_blank" rel="noopener">https://cloudup.com/i5a6LLvKVPP</a></p>
+<p>这么来理解，你可以给同一类的应用软件添加相似的鼠标手势，比如给Chrome，Firefox和IE（第一层次），这些鼠标手势具体包括的动作是哪些，比如浏览器常用的“L”动作（第二层次），这些动作响应的是哪些命令，比如”L”响应的是关闭标签页（Ctrl + W）。</p>
+<p>把上面搞懂后，再去稍微研究下就知道怎么用了，不过这软件的功能真是太强大了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/04/01/strokeit-e6-89-8b-e5-8a-bf-e8-bd-af-e4-bb-b6/" data-id="cjfukge3300ciqoz1h001439x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-94-af-e4-bb-98-e5-ae-9d-e5-a6-82-e6-9e-9c-e8-b7-9f-e4-ba-a4-e9-80-9a-e5-8d-a1-e7-bb-91-e5-ae-9a-e5-91-a2-ef-bc-9f" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/03/21/e6-94-af-e4-bb-98-e5-ae-9d-e5-a6-82-e6-9e-9c-e8-b7-9f-e4-ba-a4-e9-80-9a-e5-8d-a1-e7-bb-91-e5-ae-9a-e5-91-a2-ef-bc-9f/" class="article-date">
+  <time datetime="2013-03-21T11:54:35.000Z" itemprop="datePublished">2013-03-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/App/">App</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/03/21/e6-94-af-e4-bb-98-e5-ae-9d-e5-a6-82-e6-9e-9c-e8-b7-9f-e4-ba-a4-e9-80-9a-e5-8d-a1-e7-bb-91-e5-ae-9a-e5-91-a2-ef-bc-9f/">支付宝如果跟交通卡绑定呢？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天午饭在看《<a href="http://www.huxiu.com/article/11649/1.html" target="_blank" rel="noopener">支付宝，移动端的攻守道</a>》时，文中介绍到支付宝倾向的三种方式：二维码，超级收款和声波。我突然想到，能不能让支付宝绑定深圳通呢？<br>后来认真想了想，觉得这方便不太可行。<br>我有这想法是因为1、香港那边用八达通在便利店买东西太方便了；2、支付宝之前是陆续跟全国各大城市的水电煤部门合作，才逐渐可以用支付宝交费的。<br>不可行的原因有：<br>1、首先，还是得解决终端的问题，跟pos机一样，这成本可不小，这个钱不可能全部由支付宝来摊。<br>2、其次，即便解决了终端问题，那可以像香港那样，将八达通绑定银行卡自动充值，为什么在银行和交通卡中间插一个支付宝？</p>
+<p>支付宝如何解决这个问题呢？<br>1、跟地方交通卡合作，共同出资推广交通卡终端，地方交通卡部门肯定不想这钱只被银联赚走；<br>2、收费要比银联便宜，前期可以免费推广；<br>3、免费帮商家统计客户消费习惯信息，有助于商家有针对性的营销；</p>
+<p>PS：上海的交通卡能否跟银行卡绑定呢，我坐出租车时，经常是不想用交通卡，因为刷几次出租车，卡里就没钱了，要是能跟银行卡绑定就好了，不过交通卡应该都是不记名的，应该没有绑定的功能。</p>
+<p>下面来想想如果用二维码来消费，是怎样一个过程：<br>以餐饮为例：<br>顾客进餐馆点菜后准备付款，服务员拿着一个装有支付宝的智能手机过来，输入要收款的金额，顾客拿出手机，打开支付宝，点击扫码按钮，扫码完毕，付款。这样每个店至少得配几台智能手机用来收款。<br>或者顾客去服务台付款，服务台得再多配一台显示器朝向顾客，并显示二维码，顾客拿出手机扫描。<br>以上你会发现，商店得额外增加几百块的成本呢。</p>
+<p>确实，支付宝得针对pos机没有覆盖到的地方，这些小店的老板要用自个手机来收款，那还真要好久时间来培训，而且这些老板应该多偏向保守，不大会用手机来处理金钱。好处是店员省了很多时间来清点现金，不会有假币，不用跑银行了。</p>
+<p>总的来说，这是未来大势所趋了，支付宝如不加快速度，微信和财付通在后面很快就追上来了，这是一个很爽的时代，我觉得我可以用手机在线下付款的时间不会等太久了，两年之内足矣。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/03/21/e6-94-af-e4-bb-98-e5-ae-9d-e5-a6-82-e6-9e-9c-e8-b7-9f-e4-ba-a4-e9-80-9a-e5-8d-a1-e7-bb-91-e5-ae-9a-e5-91-a2-ef-bc-9f/" data-id="cjfukgdvd006kqoz1xwvw1n06" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-245" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/02/24/245/" class="article-date">
+  <time datetime="2013-02-24T15:27:50.000Z" itemprop="datePublished">2013-02-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/02/24/245/">2012个人小结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我一般春节过后再做总结和计划</p>
+<h1 id="技能方面"><a href="#技能方面" class="headerlink" title="技能方面"></a>技能方面</h1><p>做了个Word编程的项目；</p>
+<p>做了个图片格式转换的项目，并第一次进行了商业化界面开发；</p>
+<p>第一次构思产品的界面，功能，写需求调查，并且负责和设计公司沟通界面需求，把关最后的设计稿输出；</p>
+<p>前期一边跟设计公司沟通，一边尝试用VBO和使用后缓冲区进行物体选择，三维渲染提升太多了；</p>
+<p>后期进行商业化软件界面开发，最终出来的效果真不错；</p>
+<p>英文方面的学习有点松懈。</p>
+<h1 id="产品方面"><a href="#产品方面" class="headerlink" title="产品方面"></a>产品方面</h1><p>做了个简洁的微博提醒工具，新浪微博的C++ API太难用了，后来果断改为做腾讯微博的，再过段时间就可以上线了。</p>
+<h1 id="获奖方面"><a href="#获奖方面" class="headerlink" title="获奖方面"></a>获奖方面</h1><p>获得了年度优秀员工，在全公司人的面前颁奖，这是对我一年来努力的肯定。</p>
+<h1 id="旅游方面"><a href="#旅游方面" class="headerlink" title="旅游方面"></a>旅游方面</h1><p>去了两次香港，把香港大的景点都玩过了。</p>
+<h1 id="年度计划实现方面"><a href="#年度计划实现方面" class="headerlink" title="年度计划实现方面"></a>年度计划实现方面</h1><p>14个计划，完成9个，实现率64%，及格了。</p>
+<h1 id="阅读方面"><a href="#阅读方面" class="headerlink" title="阅读方面"></a>阅读方面</h1><p>看了12本书，21部电影，一部港剧，在跟美剧行尸走肉。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/02/24/245/" data-id="cjfukgdku0011qoz16mhe4jmb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-e6-88-91-e5-b8-b8-e7-94-a8-e7-9a-84vs-e5-bf-ab-e6-8d-b7-e9-94-ae" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/02/21/e6-88-91-e5-b8-b8-e7-94-a8-e7-9a-84vs-e5-bf-ab-e6-8d-b7-e9-94-ae/" class="article-date">
+  <time datetime="2013-02-21T08:16:53.000Z" itemprop="datePublished">2013-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/Skill/">Skill</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/02/21/e6-88-91-e5-b8-b8-e7-94-a8-e7-9a-84vs-e5-bf-ab-e6-8d-b7-e9-94-ae/">我常用的VS快捷键</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div>使用Visual Studio这么多年，现在已经尽量使用快捷键来操作，尽量少用鼠标，提高效率。<br><div>我都有安装Visual AssistX工具，有一些快捷键是VA的，如下：</div><br><div>Ctrl+F 当前页面搜索</div><br><div><br><div>Ctrl+Shift+F 整个工程搜索</div><br></div><br><div>Ctrl+I 直接在页面快速搜索</div><br><div><br><div>F3: 查找下一个</div><br><div>Shift+F3: 查找上一个</div><br></div><br><div></div><br><div>在当前文件中搜索某个函数，可以</div><br><div>Alt+M 跳到VA的工具栏直接搜索所有的函数</div><br><div><br><div>Ctrl+M，Ctrl+L 把所有的函数都收起来，这样子也比较容易找到要找的函数</div><br></div><br><div></div><br><div>Alt+O，跳到本文件对应的.h或.cpp文件</div><br><div>Alt+G，光标在某个函数，跳到该函数的声明或定义，比F12好用</div><br><div>Alt+←，将光标移到前一个光标位置</div><br><div>Ctrl+Tab，快速按一下：切换到前一个文件；按住Ctrl，多次按Tab：逐个切换文件</div><br><div></div><br><div>Ctrl+W，选中当前变量或函数</div><br><div></div><br><div><br><div>CTRL + U转小写</div><br><div>CTRL + SHIFT + U转大写</div><br></div><br><div></div><br><div>Ctrl+F4，关闭文件</div><br><div></div><br><div>F4，编译后如果有错误，跳到第一个错误</div><br><div></div><br><div>Alt+F10，在调试时，应用修改</div><br></div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2013/02/21/e6-88-91-e5-b8-b8-e7-94-a8-e7-9a-84vs-e5-bf-ab-e6-8d-b7-e9-94-ae/" data-id="cjfukgduo005vqoz1ni2n9pgj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/14/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/16/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/IT/">IT</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/Python/">Python</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C++</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/C/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C/UI/">UI</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/English/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTMLCSS/">HTMLCSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/IT/">IT</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/IT/Life/">Life</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/Skill/">Skill</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ObjectC/">ObjectC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/OpenGL/">OpenGL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Phone/">Phone</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Skill/">Skill</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unity3D/">Unity3D</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-730/">LG HBS 730</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LG-HBS-800/">LG HBS 800</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oculus/">Oculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Paypal/">Paypal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Verified/">Verified</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cpanel/">cpanel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-glass/">google glass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/makerfair/">makerfair;</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mini-weibo/">mini weibo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/order/">order</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phtyon/">phtyon</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssl/">ssl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/uber-shenzhen/">uber shenzhen</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/LG-HBS-730/" style="font-size: 10px;">LG HBS 730</a> <a href="/tags/LG-HBS-800/" style="font-size: 10px;">LG HBS 800</a> <a href="/tags/Oculus/" style="font-size: 10px;">Oculus</a> <a href="/tags/Paypal/" style="font-size: 10px;">Paypal</a> <a href="/tags/Verified/" style="font-size: 10px;">Verified</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/cpanel/" style="font-size: 10px;">cpanel</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/google-glass/" style="font-size: 10px;">google glass</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/makerfair/" style="font-size: 10px;">makerfair;</a> <a href="/tags/mini-weibo/" style="font-size: 10px;">mini weibo</a> <a href="/tags/order/" style="font-size: 10px;">order</a> <a href="/tags/phtyon/" style="font-size: 10px;">phtyon</a> <a href="/tags/ssl/" style="font-size: 10px;">ssl</a> <a href="/tags/uber-shenzhen/" style="font-size: 10px;">uber shenzhen</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 10px;">wordpress</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/06/">June 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/11/Test/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hexo-httprequestexception-encountered-could-not-read-username-for-httpsgithub-com/">Hexo, HttpRequestException encountered, could not read Username for &#39;https://github.com&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/10/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/09/e9-a6-99-e6-b8-af-e7-99-be-e4-bd-b3-e7-ba-bf-e4-b8-8a-e8-b4-ad-e7-89-a9-e4-bd-93-e9-aa-8c/">香港百佳线上购物体验</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/windows-10-e6-9b-b4-e6-96-b0-e9-94-99-e8-af-af-0x800f081f-e7-9a-84-e8-a7-a3-e5-86-b3-e5-8a-9e-e6-b3-95/">Windows 10 更新错误 0x800f081f 的解决办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
